@@ -91,7 +91,7 @@ dout = 0.622 * fiout * d1 / ((0.622+d1)*P / 101300 - fiout * d1) ;
         if (fiout> 1.0)
 		{
 		//   точка находится в области ледяного тумана    
-//{*********  h1   := seval(146,tvout,t,h,bhft,chft,dhft); *************}
+//*********  h1   := seval(146,tvout,t,h,bhft,chft,dhft); *************
 		  x_spl = t   ;
           y_spl = h    ;
           b_spl = bhft ;
@@ -99,24 +99,24 @@ dout = 0.622 * fiout * d1 / ((0.622+d1)*P / 101300 - fiout * d1) ;
           d_spl = dhft ; 
 			
 h1   = seval2(146,tvout,x_spl,y_spl,b_spl,c_spl,d_spl) ;
-		}
+		
 
-	if (tvout>= 0.0) 
-	{
-	//   точка находится в области водяного тумана    
-		 hout = h1+4190.0*(dout-d1);
-	}
-	else
-	{
-	hout = h1+(2050.0*tvout-333400.0)*(dout-d1);
-    }
+			if (tvout>= 0.0) 
+			{
+			//   точка находится в области водяного тумана    
+				hout = h1+4190.0*(dout-d1);
+			}
+			else
+			{
+				hout = h1+(2050.0*tvout-333400.0)*(dout-d1);
+			};
 		}
-
-  else
-  {
-  //   точка находится над (на) пограничной кривой  
-  hout = 1006.0* tvout + dout* (1860.0* tvout+ 2500000.0);
-  }
+		else
+		{	
+			//   точка находится над (на) пограничной кривой  
+			hout = 1006.0* tvout + dout* (1860.0* tvout+ 2500000.0);
+		};
+  
    var result1, result2;
    result1=document.getElementById("result1");
    result2=document.getElementById("result2");
