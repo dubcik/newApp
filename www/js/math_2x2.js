@@ -5,7 +5,7 @@ var h=[-50240.0,-49230.0,-48210.0,-47200.0,-46180.0,-45170.0,-44150.0,-43130.0,-
 var x_spl, y_spl, b_spl, c_spl, d_spl, bhft, chft, dhft, bhfd, chfd, dhfd, bdft, cdft, ddft, bdfh, cdfh, ddfh, btfh, ctfh, dtfh, btfd, ctfd, dtfd;
 var d1, h1, dout, hout;
 		 var tvout=document.getElementById("Temperature").value;
-		 var fiout=document.getElementById("Ot.Vlajnosti").value;
+		 var fiout=(document.getElementById("Ot.Vlajnosti").value)/100;
 		 var P=document.getElementById("Davlenie").value;
 		 
 ///**********   spline(146,t,h,bhft,chft,dhft) ;   ***********
