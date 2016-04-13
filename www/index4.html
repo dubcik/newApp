@@ -30,21 +30,21 @@
 										Д<small><small>авление</small></small>:<br>
 										<input type="number" class="input" id="Davlenie" name="Davlenie" max="100" min="0" value="101300"> <output> П<small><small>а</small></small></output><br><br>
 									 
-										<select type="text" id="formula" name="formula" required value="" size="1"><br>
+										<select type="text" id="formula1" name="formula" required value="" size="1"><br>
 									 <option >Температура &ordm С</option>
 									 <option >Отн. владжность %</option>
 									 <option >Энтальпия  <small><small>к</small></small>Д<small><small>ж</small></small>/<small><small>кг</small></small></option>
-									 <option >Влагосодержание <small><small>г</small></small>/<small><small>кг</small></small></option>
+									 <!--<option >Влагосодержание <small><small>г</small></small>/<small><small>кг</small></small></option>-->
 									 </select><br><br>
-										<input type="number" class="input" id="Temperature" name="Temperature" max="95" min="-50" > <output> </output><br><br>
+										<input type="number" class="input" id="Temperature" name="Temperature"  > <output> </output><br><br>
 									 
-										<select type="text" id="formula" name="formula" required value="" size="1"><br>
+										<select type="text" id="formula2" name="formula" required value="" size="1"><br>
 									 <option >Отн. владжность %</option>
 									 <option >Температура &ordm С</option>
 									 <option >Энтальпия  <small><small>к</small></small>Д<small><small>ж</small></small>/<small><small>кг</small></small></option>
-									 <option >Влагосодержание <small><small>г</small></small>/<small><small>кг</small></small></option>
+									 <!--<option >Влагосодержание <small><small>г</small></small>/<small><small>кг</small></small></option>-->
 									 </select><br><br>
-										<input type="number" class="input" id="Ot.Vlajnosti" name="Ot.Vlajnosti" max="100" min="-60"><output> </output><br><br>
+										<input type="number" class="input" id="Ot.Vlajnosti" name="Ot.Vlajnosti" ><output> </output><br><br>
 									
 							
 						<input type="button" class="out" id="btn" value="Расcчитать"><br><br>
@@ -57,7 +57,9 @@
 						</ul>
 						<script type="text/javascript" src="js/math_2x2.js"></script>
 						<script type="text/javascript">
+						
 document.getElementById("btn").onclick=function(){finish();};
+///h = f(t), t = f(d), d = f(h), h = f(d), d = f(t), t = f(d)
 									</script>
 				</p>
 					
