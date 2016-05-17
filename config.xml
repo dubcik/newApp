@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="com.example.helloworld" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" id="com.entalpy_calc" version="1.0.0">
   <name>entalpy_calc</name>
   <description/>
-  <author/>
+  <author email="andrei_dubovoi@mail.ru">Dubovoi Andrei</author>
   <content src="index.html"/>
   <access origin="*"/>
   <allow-navigation href="*"/>
