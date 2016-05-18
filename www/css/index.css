@@ -154,13 +154,15 @@ h2 {
 .subb{
     display:table-cell;
     width: 50%;
+    color: white;
+    text-decoration: none;
     text-align: center;
     border-radius:4px;
     -webkit-border-radius:4px;
     color:#FFFFFF;
     font-size:15px;
-    margin:0px 30px;
-    padding:10px 10px 20px 0px;
+    margin:0px 10px;
+    padding:0px 0px 0px 0px;
     background-color:#333333;
 }
 .subb2{
@@ -184,22 +186,32 @@ h2 {
     margin:0px 10px;
     padding:10px 5px 5px 5px;
     background-color:#333333;
-    /*border:2px solid red;*/
+    /*border: 2px solid red;*/
 }
 .subbHome{
     display:table-cell;
-    width: 15%;
+    width: 7%;
+    height: 50%;
     text-align: center;
     border-radius:4px;
     -webkit-border-radius:4px;
     color:#FFFFFF;
-    font-size:15px;
-    margin:0px 30px;
-    padding:10px 10px 20px 0px;
+    margin: 0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
     background-color:#333333;
+    
+}
+.homeimage{
+    width:20px;
+    height:20px;
+    padding:0px 0px 0px 0px;
+    /*border: 2px solid red;*/
+    
 }
 .subb3{
     width: 80%;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    color: white;
     text-align: center;
     border-radius:4px;
     -webkit-border-radius:4px;
@@ -209,6 +221,24 @@ h2 {
     padding:10px 10px 20px 0px;
     background-color:#333333;
 }
+.buton_select{
+    width: 100%;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    color: white;
+    text-align: center;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:15px;
+    margin:0px;
+    padding:15px 0px 15px 0px;
+    background-color:#333333;
+   /* border: 2px solid red;*/
+}
+.buton_href{ 
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    color: white;
+   }
 .titul{
     margin:0px auto;
     /*padding: 3em 0;*/
@@ -232,6 +262,11 @@ h2 {
 .blik2{
     animation:fade 5500ms infinite;
     -webkit-animation:fade 5500ms infinite;
+    /*border: 2px solid yellow;*/
+}
+a{text-decoration: none;}
+a:hover{
+     text-decoration: none;
 }
 .chart_div{
     padding: 10px; /* Поля вокруг текста */
