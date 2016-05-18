@@ -186,6 +186,18 @@ h2 {
     background-color:#333333;
     /*border:2px solid red;*/
 }
+.subbHome{
+    display:table-cell;
+    width: 15%;
+    text-align: center;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:15px;
+    margin:0px 30px;
+    padding:10px 10px 20px 0px;
+    background-color:#333333;
+}
 .subb3{
     width: 80%;
     text-align: center;

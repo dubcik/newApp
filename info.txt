@@ -1,0 +1,63 @@
+Node version: v5.5.0
+
+Cordova version: 6.1.1
+
+Config.xml file: 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="com.entalpy_calc" version="1.0.0">
+  <name>entalpy_calc</name>
+  <description/>
+  <author email="andrei_dubovoi@mail.ru">Dubovoi Andrei</author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <allow-navigation href="*"/>
+  <allow-intent href="itms:*"/>
+  <allow-intent href="itms-apps:*"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="Orientation" value="default"/>
+  <preference name="loglevel" value="DEBUG"/>
+  <preference name="AndroidLaunchMode" value="singleTop"/>
+  <preference name="ErrorUrl" value=""/>
+  <preference name="Fullscreen" value="false"/>
+  <preference name="KeepRunning" value="true"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="1000"/>
+  <preference name="AllowInlineMediaPlayback" value="false"/>
+  <preference name="AutoHideSplashScreen" value="true"/>
+  <preference name="BackupWebStorage" value="cloud"/>
+  <preference name="EnableViewportScale" value="false"/>
+  <preference name="FadeSplashScreen" value="true"/>
+  <preference name="FadeSplashScreenDuration" value=".25"/>
+  <preference name="KeyboardDisplayRequiresUserAction" value="true"/>
+  <preference name="MediaPlaybackRequiresUserAction" value="false"/>
+  <preference name="ShowSplashScreenSpinner" value="false"/>
+  <preference name="SuppressesIncrementalRendering" value="false"/>
+  <preference name="TopActivityIndicator" value="gray"/>
+  <preference name="GapBetweenPages" value="0"/>
+  <preference name="PageLength" value="0"/>
+  <preference name="PaginationBreakingMode" value="page"/>
+  <preference name="PaginationMode" value="unpaginated"/>
+  <feature name="LocalStorage">
+    <param name="ios-package" value="CDVLocalStorage"/>
+  </feature>
+  <preference name="UIWebViewDecelerationSpeed" value="normal"/>
+  <preference name="monaca:AndroidIsPackageNameSeparate" value="false"/>
+  <preference name="monaca:targetFamilyiPhone" value="1"/>
+  <preference name="monaca:targetFamilyiPad" value="1"/>
+</widget>
+
+
+No Plugins Currently Installed
+
+Error retrieving Android platform information: 
+Android SDK is not set up properly. Make sure that the Android SDK 'tools' and 'platform-tools' directories are in the PATH variable. 
+
+Error: cmd: Command failed with exit code 1 Error output:
+"android" �� ����� ����७��� ��� ���譥�
+��������, �ᯮ��塞�� �ணࠬ��� ��� �������� 䠩���.
+
+Error retrieving iOS platform information: Error: cmd: Command failed with exit code 1 Error output:
+"xcodebuild" �� ����� ����७��� ��� ���譥�
+��������, �ᯮ��塞�� �ணࠬ��� ��� �������� 䠩���.
+
