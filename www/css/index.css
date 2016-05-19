@@ -150,7 +150,17 @@ h2 {
     padding:10px 10px 20px 0px;
     background-color:#333333;
 }
-
+.last{
+   display:table-cell;
+    width: 100%;
+    text-align: center;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    margin:0px 10px;
+    padding:10px 10px 20px 0px;
+    background-color:#333333;
+}
 .subb{
     display:table-cell;
     width: 50%;
@@ -295,4 +305,19 @@ a:hover{
     text-align: left;
     text-transform:none;
 
+}
+
+.info{
+    font-size:18px;
+    padding: 11px 11px 11px 11px; /* Поля вокруг текста */
+    margin: 0 auto;
+     text-align: left;
+    text-transform:none;
+}
+.numeration{
+    font-size:16px;
+    padding: 9px 9px 9px 9px; /* Поля вокруг текста */
+    margin: 0 auto;
+     text-align: left;
+    text-transform:none;
 }

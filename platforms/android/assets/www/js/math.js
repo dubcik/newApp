@@ -1,27 +1,174 @@
 function Name_Product(){
 		var m=document.getElementById("name");
 		var v=document.getElementById("name_prod");
+		var error0=document.getElementById("error0");
 							v.value=m.value;
 							var as=document.getElementById("crio").value;
+							var crios=document.getElementById("crio");
+							var vodos=document.getElementById("sod_vodi");
 							var dis=document.getElementById("sod_vodi").value;
+							var erorCrio=document.getElementById("errorCrio").value;
+							var erorVoda=document.getElementById("errorVoda").value;
 					if(m.value=="1")
 					{
 						v.value="Нет в списке или неизвестен";
+						error0.value="";
+						
+						if(as>=0||as<-5)
+						{
+							if(as>=0)
+							{crios.value==0.01;}
+							if(as<-5)
+							{crios.value==-5;}
+						}
+						if(dis>=1||dis<=0)
+						{
+							if(dis>=1)
+							{vodos.value==1;}
+							if(dis<=0)
+							{vodos.value==0;}
+						}
+						
+						if(erste>100||erste<-50.1)
+						{
+							v.value="";
+							if(erste>100)
+							{first.value=100;}
+							if(erste<-50.1)
+							{first.value=-50;}
+						}
+						if(zweite>100||zweite<-50.1)
+						{
+							v.value="";
+							if(zweite>100)
+							{last.value=100;}
+							if(zweite<-50.1)
+							{last.value=-50;}
+						}
+						
 					}
 					else if(m.value=="- Выберите продукт -")
 					{
+						error0.value="Выберите продукт!";
 						v.value="";
 					}
+					else{error0.value="";}
 		if(as!=""&dis!="")
 		{
+			error0.value="";
 			v.value="";
 		}
 				 }
-				 
+function validation()
+{			var m=document.getElementById("name");
+				var name=document.getElementById("name_prod");
+				var v=document.getElementById("vv");
+				var erste=document.getElementById("first").value;
+				var first=document.getElementById("first");
+				var zweite=document.getElementById("last").value;
+				var last=document.getElementById("last");
+				var error1=document.getElementById("error1");
+				var error2=document.getElementById("error2");
+				
+				var error0=document.getElementById("error0");
+					var as=document.getElementById("crio").value;
+					var crios=document.getElementById("crio");
+					var vodos=document.getElementById("sod_vodi");
+					var dis=document.getElementById("sod_vodi").value;
+					var erorCrio=document.getElementById("errorCrio").value;
+					var erorVoda=document.getElementById("errorVoda").value;
+							
+	if(m.value=="1")
+	{
+								
+						if(as>=0||as<-5)
+						{
+							
+							if(as>=0)
+							{crios.value==0.01;}
+							if(as<-5)
+							{crios.value==-5;}
+						erorCrio.value="";
+						}
+						if(dis>=1||dis<=0)
+						{
+							
+							if(dis>=1)
+							{vodos.value==1;}
+							if(dis<=0)
+							{vodos.value==0;}
+						erorVoda.value="";
+						}
+		if(erste>100||erste<-50.1)
+	{
+		v.value="";
+		name.value="";
+		if(erste>100)
+		{first.value=100;}
+		if(erste<-50.1)
+		{first.value=-50;}
+	error0.value="";
+	}
+	if(zweite>100||zweite<-50.1)
+	{
+		v.value="";
+		name.value="";
+		if(zweite>100)
+		{last.value=100;}
+		if(zweite<-50.1)
+		{last.value=-50;}
+	error0.value="";
+	}
+	}
+	else //(m.value!="- Выберите продукт -")
+	{
+	if(erste>100||erste<-60.1)
+	{
+		v.value="";
+		name.value="";
+		if(erste>100)
+		{first.value=100;}
+		if(erste<-60.1)
+		{first.value=-60;}
+	error0.value="";
+	}
+	if(zweite>100||zweite<-60.1)
+	{
+		v.value="";
+		name.value="";
+		if(zweite>100)
+		{last.value=100;}
+		if(zweite<-60.1)
+		{last.value=-60;}
+	error0.value="";
+	}
+	}
+}				 
 				 
 
 	
-
+function empty()
+{
+	var erste=document.getElementById("first").value;
+				var zweite=document.getElementById("last").value;
+				var v=document.getElementById("vv");
+if(erste==""){ 
+			document.getElementById("vv").value="";
+			document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="  Введите число!";
+			document.getElementById("error2").value="";
+return false;}
+else if(zweite==""){
+			document.getElementById("vv").value="";
+			document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="  Введите число!";
+return false;}
+else{
+document.getElementById("error1").value="";
+document.getElementById("error2").value="";
+}
+}
 
 				 
 function finish(){
@@ -31,7 +178,8 @@ function finish(){
 	
 	var erste=document.getElementById("first").value;
 				var zweite=document.getElementById("last").value;
-				
+				var v=document.getElementById("vv");
+
 				var mim=parseFloat(erste);
 				var nin=parseFloat(zweite);
 
@@ -225,7 +373,7 @@ for (j= 1; j< 1601; j++)   //  запускаем цикл интегриров�
 	
   }
   }
-		var v=document.getElementById("vv");
+		
 		v.value=((resultat_Cijov1-resultat_Cijov)/1000).toFixed(6);
 		}
 		break;
@@ -1959,10 +2107,13 @@ for(var i=0;i<graph1.length;i++)
 		
 		}
 
+		
+		
 return graph;
 };
 
 document.getElementById("name").addEventListener("change", function () {
+	
 	if(document.getElementById('name').value==1){
 	document.getElementById('gran1').innerHTML="Ограничение  [-50 100]";
 	document.getElementById('gran2').innerHTML="Ограничение  [-50 100]";}
