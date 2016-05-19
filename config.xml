@@ -39,5 +39,5 @@
     <preference name="monaca:AndroidIsPackageNameSeparate" value="false" />
     <preference name="monaca:targetFamilyiPhone" value="1" />
     <preference name="monaca:targetFamilyiPad" value="1" />
-    <engine name="android" spec="~4.2.2" />
+    <engine name="android" spec="~4.1.0" />
 </widget>

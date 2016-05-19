@@ -218,6 +218,13 @@ h2 {
     /*border: 2px solid red;*/
     
 }
+.homeimage2{
+    width:22px;
+    height:22px;
+    padding:0px 0px 0px 10px;
+    /*border: 2px solid red;*/
+    
+}
 .subb3{
     width: 80%;
     text-decoration: none; /* Отменяем подчеркивание у ссылки */
@@ -320,4 +327,22 @@ a:hover{
     margin: 0 auto;
      text-align: left;
     text-transform:none;
+}
+.resurs{
+    font-size:18px;
+    padding: 11px 11px 11px 11px; /* Поля вокруг текста */
+    margin: 0 auto;
+     padding: 5%;
+    font-weight:bold;
+    text-align: center;
+    text-transform:none;
+}
+
+.numeration_resurs{
+    font-size:21px;
+    padding: 12px; /* Поля вокруг текста */
+    margin: 0 auto;
+     text-align: left;
+    text-transform:none;
+     font-weight:none;
 }

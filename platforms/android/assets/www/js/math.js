@@ -13,36 +13,36 @@ function Name_Product(){
 					{
 						v.value="Нет в списке или неизвестен";
 						error0.value="";
-						
-						if(as>=0||as<-5)
+						if(as>0.01||as<-5)
 						{
-							if(as>=0)
-							{crios.value==0.01;}
+							if(as>0.01)
+							{
+								crios.value=0.01;}
 							if(as<-5)
-							{crios.value==-5;}
+							{crios.value=-5;}
 						}
-						if(dis>=1||dis<=0)
+						if(dis>1||dis<0)
 						{
-							if(dis>=1)
-							{vodos.value==1;}
-							if(dis<=0)
-							{vodos.value==0;}
+							if(dis>1)
+							{vodos.value=1;}
+							if(dis<0)
+							{vodos.value=0;}
 						}
 						
-						if(erste>100||erste<-50.1)
+						if(erste>100||erste<-50)
 						{
 							v.value="";
 							if(erste>100)
 							{first.value=100;}
-							if(erste<-50.1)
+							if(erste<-50)
 							{first.value=-50;}
 						}
-						if(zweite>100||zweite<-50.1)
+						if(zweite>100||zweite<-50)
 						{
 							v.value="";
 							if(zweite>100)
 							{last.value=100;}
-							if(zweite<-50.1)
+							if(zweite<-50)
 							{last.value=-50;}
 						}
 						
@@ -51,6 +51,45 @@ function Name_Product(){
 					{
 						error0.value="Выберите продукт!";
 						v.value="";
+						var erste=document.getElementById("first").value;
+				var zweite=document.getElementById("last").value;
+				var croi_prov=document.getElementById("crio").value;
+				var voda_prov=document.getElementById("sod_vodi").value;
+if(erste==""){ 
+			document.getElementById("vv").value="";
+			document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="  Введите число!";
+			document.getElementById("error2").value="";
+return false;}
+else if(zweite==""){
+			document.getElementById("vv").value="";
+			document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="  Введите число!";
+return false;}
+if(croi_prov==""){ 
+			document.getElementById("vv").value="";
+			document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="  Введите число!";
+			document.getElementById("errorVoda").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else if(voda_prov==""){
+			document.getElementById("vv").value="";
+			document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="";
+			document.getElementById("errorVoda").value="  Введите число!";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else{
+	//errorCrio   errorVoda
+	document.getElementById("errorCrio").value="";
+	document.getElementById("errorVoda").value="";
+document.getElementById("error1").value="";
+document.getElementById("error2").value="";
+}
 					}
 					else{error0.value="";}
 		if(as!=""&dis!="")
@@ -75,70 +114,68 @@ function validation()
 					var crios=document.getElementById("crio");
 					var vodos=document.getElementById("sod_vodi");
 					var dis=document.getElementById("sod_vodi").value;
-					var erorCrio=document.getElementById("errorCrio").value;
-					var erorVoda=document.getElementById("errorVoda").value;
+					var erorCrio=document.getElementById("errorCrio");
+					var erorVoda=document.getElementById("errorVoda");
 							
 	if(m.value=="1")
 	{
 								
-						if(as>=0||as<-5)
+						if(as>0.01||as<-5)
 						{
-							
-							if(as>=0)
-							{crios.value==0.01;}
+							if(as>0.01)
+							{
+								crios.value=0.01;}
 							if(as<-5)
-							{crios.value==-5;}
-						erorCrio.value="";
+							{crios.value=-5;}
 						}
-						if(dis>=1||dis<=0)
+						if(dis>1||dis<0)
 						{
-							
-							if(dis>=1)
-							{vodos.value==1;}
-							if(dis<=0)
-							{vodos.value==0;}
-						erorVoda.value="";
+							if(dis>1)
+							{vodos.value=1;}
+							if(dis<0)
+							{vodos.value=0;}
 						}
-		if(erste>100||erste<-50.1)
+		if(erste>100||erste<-50)
 	{
 		v.value="";
 		name.value="";
 		if(erste>100)
 		{first.value=100;}
-		if(erste<-50.1)
+		if(erste<-50)
 		{first.value=-50;}
 	error0.value="";
 	}
-	if(zweite>100||zweite<-50.1)
+	if(zweite>100||zweite<-50)
 	{
 		v.value="";
 		name.value="";
 		if(zweite>100)
 		{last.value=100;}
-		if(zweite<-50.1)
+		if(zweite<-50)
 		{last.value=-50;}
 	error0.value="";
 	}
 	}
 	else //(m.value!="- Выберите продукт -")
 	{
-	if(erste>100||erste<-60.1)
+		
+	if(erste>100||erste<-60)
 	{
 		v.value="";
 		name.value="";
 		if(erste>100)
 		{first.value=100;}
-		if(erste<-60.1)
+		if(erste<-60)
 		{first.value=-60;}
 	error0.value="";
 	}
-	if(zweite>100||zweite<-60.1)
+	if(zweite>100||zweite<-60)
 	{
 		v.value="";
 		name.value="";
 		if(zweite>100)
 		{last.value=100;}
-		if(zweite<-60.1)
+		if(zweite<-60)
 		{last.value=-60;}
 	error0.value="";
 	}
@@ -151,7 +188,8 @@ function empty()
 {
 	var erste=document.getElementById("first").value;
 				var zweite=document.getElementById("last").value;
-				var v=document.getElementById("vv");
+				var croi_prov=document.getElementById("crio").value;
+				var voda_prov=document.getElementById("sod_vodi").value;
 if(erste==""){ 
 			document.getElementById("vv").value="";
 			document.getElementById("name_prod").value="";
@@ -164,7 +202,26 @@ else if(zweite==""){
 			document.getElementById("error1").value="";
 			document.getElementById("error2").value="  Введите число!";
 return false;}
+if(croi_prov==""){ 
+			document.getElementById("vv").value="";
+			document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="  Введите число!";
+			document.getElementById("errorVoda").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else if(voda_prov==""){
+			document.getElementById("vv").value="";
+			document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="";
+			document.getElementById("errorVoda").value="  Введите число!";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
 else{
+	//errorCrio   errorVoda
+	document.getElementById("errorCrio").value="";
+	document.getElementById("errorVoda").value="";
 document.getElementById("error1").value="";
 document.getElementById("error2").value="";
 }

@@ -126,8 +126,13 @@ document.getElementById('name').addEventListener('change', function () {
 									
 								<div>E<small><small>nthalpy difference</small></small></div>
 									<input  class="out" id="vv" name="return" readonly><br><br>
+									<input type="button" onclick="go()" value="Continue calculate"></input>
 							</form>  
-							
+							<script>
+							function go() {
+							document.location = "index5.html?id=" + document.getElementById("vv").value;
+							}
+							</script>
 						</ul>
 				
 						<script type="text/javascript" src="js/loader.js"></script>

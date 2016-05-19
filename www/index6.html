@@ -9,8 +9,15 @@
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Calculator conţinutului de umiditate</title>
+		<script>
+		function OnLoad() {
+            var paramValue = window.location.href.split("?")[1].split("=")[1];
+			document.getElementById("in2").value=paramValue;
+			document.getElementById("formula2").value="Entalpii";
+        }
+		</script>
     </head>
-    <body>
+    <body onload="OnLoad()">
 	<div class="blik2">	
 	<a class="subbHome" href="indexMD.html" ><img class="homeimage" src="img/house.png"  /></a >
 	<a class="subb" class="buton_calc" href="index3.html"> Entalpii </a >
@@ -46,7 +53,7 @@
 									 <option >Entalpii</option>
 									 <!--<option >Влагосодержание <small><small>г</small></small>/<small><small>кг</small></small></option>-->
 									 </select><output id="notselect2"></output><br><br>
-										<input type="number" class="input" id="in2" name="Ot.Vlajnosti" >  <output class="chart_div" id="gran2">  </output> <output id="error2"> </output>
+										<input onload="OnLoad()" type="number" class="input" id="in2" name="Ot.Vlajnosti" >  <output class="chart_div" id="gran2">  </output> <output id="error2"> </output>
 									<div id="gran22" class="chart_div">Restricție  [-60   100]</div><br>
 							
 						<input type="button" class="out" id="btn" value="Calcalat"><br><br>
