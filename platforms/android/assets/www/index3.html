@@ -126,8 +126,13 @@ document.getElementById('name').addEventListener('change', function () {
 				
 						<div>D<small><small>iferența entalpii</small></small></div>			
 							<input  class="out" id="vv" name="return" readonly><br><br>
+							<input type="button" onclick="go()" value="prelungirea calcularii"></input>
 						</form>  
-							
+							<script>
+							function go() {
+							document.location = "index6.html?id=" + document.getElementById("vv").value;
+							}
+							</script>
 						</ul>
 				
 						<script type="text/javascript" src="js/loader.js"></script>

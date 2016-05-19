@@ -127,8 +127,13 @@ document.getElementById('name').addEventListener('change', function () {
 				
 						<div> Р<small><small>азность энтальпии</small></small></div>			
 							<input  class="out" id="vv" name="return" readonly><br><br>
+							<input type="button" onclick="go()" value="Продолжать расчёты"></input>
 						</form>  
-							
+							<script>
+							function go() {
+							document.location = "index4.html?id=" + document.getElementById("vv").value;
+							}
+							</script>
 						</ul>
 						<script type="text/javascript" src="js/loader.js"></script>
     <script type="text/javascript">
