@@ -337,11 +337,36 @@ a:hover{
     text-transform:none;
 }
 
-.numeration_resurs{
-    font-size:21px;
+.numeration_resurs1{
+    display: table-cell;
+    font-size:18px;
     padding: 10px; /* Поля вокруг текста */
     margin: 0 auto;
+
+    width: 25%;/*160px;*/
      text-align: center;
     text-transform:none;
      font-weight:none;
+    /* border:2px solid blue;*/
 }
+.center{
+    text-align: center;
+   /* margin: 0 auto;
+     padding:0 auto;*/
+     display: inline-block;
+  vertical-align: middle;
+    /*border:2px solid orange;*/
+}
+.numeration_resurs{
+    display: table-cell;
+    font-size:18px;
+    height: 30px;
+    width: 160px;
+    padding: 10px; /* Поля вокруг текста */
+    /*margin: 0 auto;*/
+     text-align: center;
+    text-transform:none;
+     font-weight:none;
+    /* border:2px solid yellow;*/
+}
+

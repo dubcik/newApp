@@ -8,6 +8,7 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script type="text/javascript" src="js/index.js"></script>
         <title>Подбор оборудования</title>
 		<script>
 		function OnLoad() {
@@ -15,32 +16,48 @@
 		//энтальпия+отн влажн  =  (-50/100)0,02			(1918/100)656   (5000/95)1823
 		//температура+энтальпия=  (95/9196)307,95		(0/0,09)0,04
             var paramValue = window.location.href.split("?")[1].split("=")[1];
-			var a=paramValue;
-			var razmer=[];var obiem=[];var gabariti=[];var vlagosoderjanie=[];var cena=[];var ms=1;
+			var razmer=[];var obiem=[];var gabariti=[];
+			var vlagosoderjanie1;
+			var vlagosoderjanie2;
+			var vlagosoderjanie3;var cena=[];var ms=1;
 			razmer=[2.0,2.4,2.8,3.2,3.6,4.0];//6
 			obiem=[2.9,3.5,4.0,4.6,5.2,5.8,6.4,7.5];//8
 			gabariti=[1.2,2.0,1.6,2.4];//4
-			vlagosoderjanie=[0,10,1000];
 			cena=[53473,61669,69926,78151,86378,94605,108316,123343];//8
-			alert(paramValue+"   "+a+vlagosoderjanie[1]+"   "+cena+"  "+ms);
-			document.getElementById("td12").innerHTML=paramValue;
-			document.getElementById("td13").value=paramValue;
-			if(a==0,26){alert("Молодец иид гуляй  "+a+"   "+vlagosoderjanie[0]+"   "+cena+"  "+ms);}
-			if(a<vlagosoderjanie[1])
+			
+			vlagosoderjanie1=0;
+			
+			vlagosoderjanie2=10;
+			
+			vlagosoderjanie3=1000;
+			
+			
+			
+			
+			
+			//while(paramValue==0.26){alert("хоть работает?");}
+			if(paramValue<=vlagosoderjanie2)
 			{
-			document.getElementById("td13").value=paramValue;
+				gotot(paramValue+" 1");
 			}
-			else if(a>vlagosoderjanie[1]&a<vlagosoderjanie[2])
-			{alert(2);}
-			else if(a>vlagosoderjanie[2])
-			{alert(3);}
+			 if(paramValue>vlagosoderjanie2&&paramValue<vlagosoderjanie3)
+			{
+			gotot(paramValue+" 2");
+			}
+			 if(paramValue>=vlagosoderjanie3)
+			{
+			gotot(paramValue+" 3");
+			}
 			
         }
 		</script>
     </head>
     <body onload="OnLoad()">
+	<script type="text/javascript" src="js/ret.js"></script>
 	<script>
 	function gotot(paramValue){
+	var v=document.getElementById("td12");
+	v.innenHTML=paramValue;
 	alert(paramValue);
 			}
 	</script>
@@ -48,13 +65,13 @@
 	<a class="subbHome" href="index.html" ><img class="homeimage" src="img/house.png"  /></a >
 	<a  class="subb" class="buton_calc" href="index1.html"> Энтальпии </a >
 	<a class="subb" href="index4.html" class="buton_calc" > Влагосодержание </a >
-	<div class="subbENRURO"><a class="buton_ENRURO" href=".html"> EN</a ><a class="buton_ENRURO" href=".html"> MD</a ></div>
+	<div  class="subbENRURO"><a class="buton_ENRURO" href=".html"> EN</a ><a class="buton_ENRURO" href=".html"> MD</a ></div>
 	</div>
 	        <div class="app" >
-                <div class="resurs">Список оборудования:
-				</div>
-					<div id="resurs">
-					<table class="numeration_resurs">
+                
+					<div class="resurs" id="resurs">Список оборудования:</div>
+					<ul  class="numeration_resurs">
+					<form>
 					<tr  ><!--razmer,obiem,gabariti,vlagosoderjanie,cena;-->
 					<td  >Высота, м &nbsp&nbsp&nbsp&nbsp  </td>
 					<td  >Внутренний объем, м<sup><small>3</sup></small> &nbsp&nbsp&nbsp&nbsp </td>
@@ -62,12 +79,12 @@
 					<td  >Производитель  &nbsp&nbsp&nbsp&nbsp  </td>
 					<td  >Цена, Р &nbsp&nbsp&nbsp&nbsp  </td>
 					</tr>
-					<tr id="tr1">
-					<td ><div td="td11"/></td>
-					<td ><div td="td12"/></td>
-					<td td="td13"></td>
-					<td td="td14">1</td>
-					<td td="td15"><input type="button" onclick="OnLoad()"></td>
+					<tr class="numeration_resurs"id="tr1">
+					<td value="" onload="OnLoad()" ><div td="td11"/>1</td>
+					<td value=""  onload="OnLoad()" ><div td="td12"/>2</td>
+					<td value=""  onload="OnLoad()" td="td13"></td>
+					<td td="td14"></td>
+					<td td="td15"><input id="button" type="button" value="123"></td>
 					</tr>
 					<tr id="tr2">
 					<td id="tr21"></td>
@@ -118,8 +135,9 @@
 					<td id="tr84"></td>
 					<td id="tr85"></td>
 					</tr>
-					</table>
-					</div>
+					</form>
+					</ul>
+					
         </div>
        
         
