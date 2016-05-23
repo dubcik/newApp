@@ -46,7 +46,8 @@ body {
 } 
 
 .input{
-    width: 6em;
+    width: 4.5em;
+    text-align:right;
 }
 .select{
     width:20em;
@@ -171,7 +172,7 @@ h2 {
     -webkit-border-radius:4px;
     color:#FFFFFF;
     font-size:15px;
-    margin:0px 10px;
+    margin:0px auto;
     padding:0px 0px 0px 0px;
     background-color:#333333;
 }
@@ -239,7 +240,7 @@ h2 {
     background-color:#333333;
 }
 .buton_select{
-    width: 100%;
+   /* width: 40%;*/
     text-decoration: none; /* Отменяем подчеркивание у ссылки */
     color: white;
     text-align: center;
@@ -250,17 +251,19 @@ h2 {
     margin:0px;
     padding:15px 0px 15px 0px;
     background-color:#333333;
-   /* border: 2px solid red;*/
+    /*border: 2px solid red;*/
 }
 .buton_href{ 
     text-decoration: none; /* Отменяем подчеркивание у ссылки */
     color: white;
+    text-align: center;
+
    }
 .titul{
     margin:0px auto;
     /*padding: 3em 0;*/
-     padding: 5%;
-    font-size:33px;
+     padding: 3%;
+    font-size:31px;
     font-weight:bold;
     text-align: center;
     text-transform:none;
@@ -277,9 +280,10 @@ h2 {
     -webkit-animation:fade 5500ms infinite;
 }
 .blik2{
+    /*display: table-cell;*/
     animation:fade 5500ms infinite;
     -webkit-animation:fade 5500ms infinite;
-    /*border: 2px solid yellow;*/
+    /*border: 2px solid red;*/
 }
 a{text-decoration: none;}
 a:hover{
@@ -362,7 +366,7 @@ a:hover{
     font-size:18px;
     height: 30px;
     width: 160px;
-    padding: 10px; /* Поля вокруг текста */
+    padding: 25px; /* Поля вокруг текста */
     /*margin: 0 auto;*/
      text-align: center;
     text-transform:none;
@@ -370,3 +374,125 @@ a:hover{
     /* border:2px solid yellow;*/
 }
 
+.blik3{
+    width: 50%;
+    animation:fade 5500ms infinite;
+    -webkit-animation:fade 5500ms infinite;
+    
+}
+
+.buton_href2{ 
+     font-size:18px;
+    text-transform:none;
+    /*color: white;*/
+    text-align: center;
+   }
+
+.buton_select3{
+    width: 10%;
+    display: table-cell;
+  /*  border: 2px solid orange;*/
+}
+.buton_select4{
+   /* width: 20%;*/
+     color: white;
+    text-align: center;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    color:#FFFFFF;
+    margin:0 auto;
+    padding:10px;
+    background-color:#333333;
+   /* border: 2px solid orange;*/
+}
+.buton_select2{
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    color: white;
+    text-align: center;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:15px;
+    margin:0px;
+    padding:25px 0px 25px 0px;
+    background-color:#333333;
+}
+.home{
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    color: white;
+    text-align: center;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:15px;
+    margin:0px;
+    padding:15px 0px 15px 0px;
+    background-color:#333333;
+}
+.subbHome2{
+    display:table-cell;
+    width: 7%;
+    height: 50%;
+    text-align: left;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    margin: 0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    background-color:#333333;
+    
+}
+ hr {
+    border: none; /* Убираем границу */
+    background-color: black; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+   }
+
+.shapka{
+    width: 5%;
+    display: table-cell;
+   /* border:2px solid red;*/
+}
+.shapka_home{
+    width:  0.5%;
+    display: table-cell;
+   /* border:2px solid red;*/
+}
+.shapka_vnutr{
+   /* width: 20%;*/
+     color: white;
+    text-align: center;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    color:#FFFFFF;
+    margin:0 auto;
+    padding:15px;
+    background-color:#333333;
+   border-bottom: 2px solid orange;
+}
+.shapka_vnutr2{
+   /* width: 20%;*/
+     color: white;
+    text-align: center;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    color:#FFFFFF;
+    margin:0 auto;
+    padding:21px 15px 15px 15px;
+    background-color:#333333;
+    border-bottom: 2px solid orange;
+}
+.subb_select{
+    color: black;
+    text-align: center;
+    border-radius:0px;
+    -webkit-border-radius:0px;
+    margin:0 auto;
+    padding:19px 15px 15px 15px;
+    background-color:#b8eff9;
+    /*рамка как в ехел*/
+    border-top: 2px solid orange;
+    border-left: 3px solid orange;
+    border-right: 3px solid orange;
+}

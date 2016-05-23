@@ -1,8 +1,8 @@
 function Name_Product(){
 		var m=document.getElementById("name");
-		var v=document.getElementById("name_prod");
+	//	var v=document.getElementById("name_prod");
 		var error0=document.getElementById("error0");
-							v.value=m.value;
+							//v.value=m.value;
 							var as=document.getElementById("crio").value;
 							var crios=document.getElementById("crio");
 							var vodos=document.getElementById("sod_vodi");
@@ -57,19 +57,19 @@ function Name_Product(){
 				var voda_prov=document.getElementById("sod_vodi").value;
 if(erste==""){ 
 			document.getElementById("vv").value="";
-			document.getElementById("name_prod").value="";
+			//document.getElementById("name_prod").value="";
 			document.getElementById("error1").value="  Введите число!";
 			document.getElementById("error2").value="";
 return false;}
 else if(zweite==""){
 			document.getElementById("vv").value="";
-			document.getElementById("name_prod").value="";
+			//document.getElementById("name_prod").value="";
 			document.getElementById("error1").value="";
 			document.getElementById("error2").value="  Введите число!";
 return false;}
 if(croi_prov==""){ 
 			document.getElementById("vv").value="";
-			document.getElementById("name_prod").value="";
+			//document.getElementById("name_prod").value="";
 			document.getElementById("errorCrio").value="  Введите число!";
 			document.getElementById("errorVoda").value="";
 			document.getElementById("error1").value="";
@@ -77,7 +77,7 @@ if(croi_prov==""){
 return false;}
 else if(voda_prov==""){
 			document.getElementById("vv").value="";
-			document.getElementById("name_prod").value="";
+			//document.getElementById("name_prod").value="";
 			document.getElementById("errorCrio").value="";
 			document.getElementById("errorVoda").value="  Введите число!";
 			document.getElementById("error1").value="";
@@ -100,7 +100,7 @@ document.getElementById("error2").value="";
 				 }
 function validation()
 {			var m=document.getElementById("name");
-				var name=document.getElementById("name_prod");
+				//var name=document.getElementById("name_prod");
 				var v=document.getElementById("vv");
 				var erste=document.getElementById("first").value;
 				var first=document.getElementById("first");
@@ -138,7 +138,7 @@ function validation()
 		if(erste>100||erste<-50)
 	{
 		v.value="";
-		name.value="";
+		//name.value="";
 		if(erste>100)
 		{first.value=100;}
 		if(erste<-50)
@@ -148,7 +148,7 @@ function validation()
 	if(zweite>100||zweite<-50)
 	{
 		v.value="";
-		name.value="";
+		//name.value="";
 		if(zweite>100)
 		{last.value=100;}
 		if(zweite<-50)
@@ -162,7 +162,7 @@ function validation()
 	if(erste>100||erste<-60)
 	{
 		v.value="";
-		name.value="";
+		//name.value="";
 		if(erste>100)
 		{first.value=100;}
 		if(erste<-60)
@@ -172,7 +172,7 @@ function validation()
 	if(zweite>100||zweite<-60)
 	{
 		v.value="";
-		name.value="";
+		//name.value="";
 		if(zweite>100)
 		{last.value=100;}
 		if(zweite<-60)
@@ -192,19 +192,19 @@ function empty()
 				var voda_prov=document.getElementById("sod_vodi").value;
 if(erste==""){ 
 			document.getElementById("vv").value="";
-			document.getElementById("name_prod").value="";
+			//document.getElementById("name_prod").value="";
 			document.getElementById("error1").value="  Введите число!";
 			document.getElementById("error2").value="";
 return false;}
 else if(zweite==""){
 			document.getElementById("vv").value="";
-			document.getElementById("name_prod").value="";
+			//document.getElementById("name_prod").value="";
 			document.getElementById("error1").value="";
 			document.getElementById("error2").value="  Введите число!";
 return false;}
 if(croi_prov==""){ 
 			document.getElementById("vv").value="";
-			document.getElementById("name_prod").value="";
+			//document.getElementById("name_prod").value="";
 			document.getElementById("errorCrio").value="  Введите число!";
 			document.getElementById("errorVoda").value="";
 			document.getElementById("error1").value="";
@@ -212,7 +212,7 @@ if(croi_prov==""){
 return false;}
 else if(voda_prov==""){
 			document.getElementById("vv").value="";
-			document.getElementById("name_prod").value="";
+			//document.getElementById("name_prod").value="";
 			document.getElementById("errorCrio").value="";
 			document.getElementById("errorVoda").value="  Введите число!";
 			document.getElementById("error1").value="";
@@ -245,8 +245,8 @@ function finish(){
 var temp=new Array(213.0,214.0,215.0,216.0,217.0,218.0,219.0,220.0,221.0,222.0,223.0,224.0,225.0,226.0,227.0,228.0,229.0,230.0,231.0,232.0,233.0,234.0,235.0,236.0,237.0,238.0,239.0,240.0,241.0,242.0,243.0,244.0,245.0,246.0,247.0,248.0,249.0,250.0,251.0,252.0,253.0,254.0,255.0,256.0,257.0,258.0,259.0,260.0,261.0,262.0,263.0,264.0,265.0,266.0,267.0,268.0,269.0,270.0,271.0,271.7,273.0,274.0,275.0,276.0,277.0,278.0,279.0,280.0,281.0,282.0,283.0,284.0,285.0,286.0,287.0,288.0,289.0,290.0,291.0,292.0,293.0,294.0,295.0,296.0,297.0,298.0,299.0,300.0,301.0,302.0,303.0,304.0,305.0,306.0,307.0,308.0,309.0,310.0,311.0,312.0,313.0,314.0,315.0,316.0,317.0,318.0,319.0,320.0,321.0,322.0,323.0,324.0,325.0,326.0,327.0,328.0,329.0,330.0,331.0,332.0,333.0,334.0,335.0,336.0,337.0,338.0,339.0,340.0,341.0,342.0,343.0,344.0,345.0,346.0,347.0,348.0,349.0,350.0,351.0,352.0,353.0,354.0,355.0,356.0,357.0,358.0,359.0,360.0,361.0,362.0,363.0,364.0,365.0,366.0,367.0,368.0,369.0,370.0,371.0,372.0,373.0);
 for(var i=0;i<temp.length;i++)
 {
-	var a=temp[i]-273;
-	graph1.push(a);
+	var c=temp[i]-273;
+	graph1.push(c);
 }
 
 var croi_prov=document.getElementById("crio").value;
@@ -339,7 +339,9 @@ for (j= 1; j< 1601; j++)   //  запускаем цикл интегриров�
   }
   }
 		var v=document.getElementById("vv");
-		v.value=((resultat_Raul1-resultat_Raul)/1000).toFixed(6);
+		var itog=((resultat_Raul1-resultat_Raul)/1000).toFixed(1);
+		if(itog<0){itog=itog*(-1);}
+		v.value=itog;
 		}
 		break;
 		
@@ -431,13 +433,15 @@ for (j= 1; j< 1601; j++)   //  запускаем цикл интегриров�
   }
   }
 		
-		v.value=((resultat_Cijov1-resultat_Cijov)/1000).toFixed(6);
+		var itog=((resultat_Cijov1-resultat_Cijov)/1000).toFixed(1);
+		if(itog<0){itog=itog*(-1);}
+		v.value=itog;
 		}
 		break;
 		default:{}break;
 	};
 }
-else{
+else if(erste!=""&zweite!=""||erste!=""&&zweite!=""){
 	mim=Math.round(mim);
 	nin=Math.round(nin);
 switch(document.getElementById("name").value)
@@ -467,7 +471,7 @@ case"абрикосы":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"айва":{
@@ -495,7 +499,7 @@ case"айва":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;						
+ v.value=resultall.toFixed(1);						
 };
 	break;
 case"ананасы":{
@@ -522,7 +526,7 @@ case"ананасы":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"апельсины":{
@@ -549,7 +553,7 @@ case"апельсины":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"арбузы":{
@@ -576,7 +580,7 @@ case"арбузы":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"артишоки":{
@@ -603,7 +607,7 @@ case"артишоки":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"баклажаны":{
@@ -630,7 +634,7 @@ case"баклажаны":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"бананы":{
@@ -657,7 +661,7 @@ case"бананы":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"баранина выше средней упитанности":
@@ -685,7 +689,7 @@ case"баранина выше средней упитанности":
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"баранина ниже средней упитанности":
@@ -713,7 +717,7 @@ case"баранина ниже средней упитанности":
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;	
 case"баранина средней упитанности":
@@ -741,7 +745,7 @@ case"баранина средней упитанности":
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"бобовые":{
@@ -768,7 +772,7 @@ case"бобовые":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"брокколи":{
@@ -795,7 +799,7 @@ case"брокколи":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"булка сдобная":{
@@ -823,7 +827,7 @@ case"булка сдобная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"вино десертное":{
@@ -850,7 +854,7 @@ case"вино десертное":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"вино крепленое":{
@@ -877,7 +881,7 @@ case"вино крепленое":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"вино сухое":{
@@ -904,7 +908,7 @@ case"вино сухое":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"виноград":{
@@ -931,7 +935,7 @@ case"виноград":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"вишня":{
@@ -958,7 +962,7 @@ case"вишня":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"вода":{
@@ -985,7 +989,7 @@ case"вода":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"говядина I категории":{
@@ -1012,7 +1016,7 @@ case"говядина I категории":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"говядина II категории":{
@@ -1039,7 +1043,7 @@ case"говядина II категории":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"говядина вареная":{
@@ -1066,7 +1070,7 @@ case"говядина вареная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"говяжья кость":{
@@ -1093,7 +1097,7 @@ case"говяжья кость":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"горошек":{
@@ -1120,7 +1124,7 @@ case"горошек":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"грейпфруты":{
@@ -1147,7 +1151,7 @@ case"грейпфруты":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"грибы":{
@@ -1174,7 +1178,7 @@ case"грибы":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"груши":{
@@ -1201,7 +1205,7 @@ case"груши":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"дыни":{
@@ -1228,7 +1232,7 @@ case"дыни":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"заменитель цельного молока":{
@@ -1255,7 +1259,7 @@ case"заменитель цельного молока":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"индейка":{
@@ -1282,7 +1286,7 @@ case"индейка":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"какао со сгущенным молоком и сахаром":{
@@ -1309,7 +1313,7 @@ case"какао со сгущенным молоком и сахаром":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"капуста белокачанная":{
@@ -1336,7 +1340,7 @@ case"капуста белокачанная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"капуста брюссельская":{
@@ -1363,7 +1367,7 @@ case"капуста брюссельская":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"капуста квашенная":{
@@ -1390,7 +1394,7 @@ case"капуста квашенная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"капуста савойская":{
@@ -1417,7 +1421,7 @@ case"капуста савойская":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"капуста цветная":{
@@ -1444,7 +1448,7 @@ case"капуста цветная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"картофель":{
@@ -1471,7 +1475,7 @@ case"картофель":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"кефир жирный 3,2%":{
@@ -1498,7 +1502,7 @@ case"кефир жирный 3,2%":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"кефир обезжиренный 0%":{
@@ -1525,7 +1529,7 @@ case"кефир обезжиренный 0%":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"кефир таллинский 1%":{
@@ -1552,7 +1556,7 @@ case"кефир таллинский 1%":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"клубника":{
@@ -1579,7 +1583,7 @@ case"клубника":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"клюква":{
@@ -1606,7 +1610,7 @@ case"клюква":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса армавирская полукопченая":{
@@ -1633,7 +1637,7 @@ case"колбаса армавирская полукопченая":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса говяжья вареная":{
@@ -1660,7 +1664,7 @@ case"колбаса говяжья вареная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса деликатесная варено-копченая":{
@@ -1687,7 +1691,7 @@ case"колбаса деликатесная варено-копченая":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса диабетическая вареная":{
@@ -1714,7 +1718,7 @@ case"колбаса диабетическая вареная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса докторская вареная":{
@@ -1741,7 +1745,7 @@ case"колбаса докторская вареная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса заказная варено-копченая":{
@@ -1768,7 +1772,7 @@ case"колбаса заказная варено-копченая":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса краснодарская вареная":{
@@ -1795,7 +1799,7 @@ case"колбаса краснодарская вареная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса любительская вареная":{
@@ -1822,7 +1826,7 @@ case"колбаса любительская вареная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса любительская варено-копченая":{
@@ -1849,7 +1853,7 @@ case"колбаса любительская варено-копченая":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса любительская свиная вареная":{
@@ -1876,7 +1880,7 @@ case"колбаса любительская свиная вареная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса майкопская сырокопченая":{
@@ -1903,7 +1907,7 @@ case"колбаса майкопская сырокопченая":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса молочная вареная":{
@@ -1930,7 +1934,7 @@ case"колбаса молочная вареная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1)
 };
 	break;
 case"колбаса московская вареная":{
@@ -1957,7 +1961,7 @@ case"колбаса московская вареная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса московская варено-копченая":{
@@ -1984,7 +1988,7 @@ case"колбаса московская варено-копченая":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса московская сырокопченая":{
@@ -2011,7 +2015,7 @@ case"колбаса московская сырокопченая":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса особенная сырокопченая":{
@@ -2038,7 +2042,7 @@ case"колбаса особенная сырокопченая":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса полтавская полукопченая":{
@@ -2065,7 +2069,7 @@ case"колбаса полтавская полукопченая":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса ростовская варено-копченая":{
@@ -2092,7 +2096,7 @@ case"колбаса ростовская варено-копченая":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса русская вареная":{
@@ -2119,7 +2123,7 @@ case"колбаса русская вареная":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"колбаса сервелат варено-копченый":{
@@ -2146,7 +2150,7 @@ case"колбаса сервелат варено-копченый":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 	

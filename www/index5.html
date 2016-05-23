@@ -18,12 +18,21 @@
 		</script>
     </head>
     <body onload="OnLoad()">
-	<div class="blik2">	
-	<a class="subbHome" href="indexEN.html" ><img class="homeimage" src="img/house.png"  /></a >
-	<a class="subb" class="buton_calc" href="index2.html"> Entalphy </a >
-	<a class="subb" class="buton_calc" href="index5.html"> Moisture content  </a >
-	<div class="subbENRURO"><a class="buton_ENRURO" href="index4.html"> RU</a ><a class="buton_ENRURO" href="index6.html"> MD</a ></div>
-	</div>
+	<div class="shapka_home" >
+			
+				<a  href="indexEN.html">
+					<div class="shapka_vnutr"><img class="homeimage" src="img/house.png"  /> 	</div>
+				</a ></div>
+				<div class="shapka">
+				<a  href="index2.html">
+					<div class="shapka_vnutr2">Entalphy 	</div>
+				</a >
+		 </div>	
+		 <div class="shapka">
+				<a  href="index5.html">
+					<div class="subb_select">Moisture content 	</div>
+				</a >
+		 </div>
 	        <div class="app" >
             <div id="deviceready" class="blink">
                 
@@ -57,13 +66,24 @@
 									<div id="gran22" class="chart_div">Limitation  [-60   100]</div><br>
 							
 						<input type="button" class="out" id="btn" value="Calcalate"><br><br>
+						<hr>
 							<div><output id="out1"></output></div>	
 							<div><output class="textnormal" id="outtemp1"></output></div>	<br>
 								<output type="number" class="input" id="result1" name="result1" readonly> </output><br><br>
 				
 							<div> <output class="textnormal" id="outtemp2"></output></div>		<br>	
 								<output type="number" class="input" id="result2" name="result2" readonly> </output> <br><br>
-								<div id="s"></div>
+								<input type="button" class="out" id="resurs" onclick="go()" value="Choose equipment"><br>
+								<script>
+							function go() {
+							var i2=document.getElementById("outtemp2").value;
+							var i1=document.getElementById("outtemp1").value;
+							if(i1=="Moisture content")
+							{document.location = "ResursEN.html?id=" + document.getElementById("result1").value;}
+							if(i2=="Moisture content")
+							{document.location = "ResursEN.html?id=" + document.getElementById("result2").value;}
+							}
+							</script>
 						</form>  
 						</ul>
 						<script type="text/javascript" src="js/math_2x2EN.js"></script>

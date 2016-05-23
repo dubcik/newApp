@@ -9,7 +9,7 @@
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script type="text/javascript" src="js/index.js"></script>
-        <title>Подбор оборудования</title>
+        <title>Selectarea echipament</title>
 		<script>
 		function OnLoad() {
 		//температура+отн влажн  =  (94/100)2733    (-50/0)0  0,02
@@ -23,7 +23,7 @@
 			razmer=[2.0,2.4,2.8,3.2,3.6,4.0];//6  0-5
 			obiem=[2.9,3.5,4.0,4.6,5.2,5.8,6.4,7.5,5.4,6.8];//10  0-9
 			gabariti=[1.2,2.0,1.6,2.4,2.6];//5  0-4
-			cena=[53473,61669,69926,78151,86378,94605,108316,123343];//8  0-7
+			cena=[810.1,934.3,1059.4,1184.1,1308.7,1433.4,1641.1,1868.8];//8  0-7
 			
 			
 			vlagosoderjanie2=10;
@@ -118,6 +118,7 @@
 			}
 			
         }
+		
 		</script>
     </head>
     <body onload="OnLoad()">
@@ -130,51 +131,54 @@
 			}
 	</script>
 	<div class="blik2">	
-	<a class="subbHome" href="index.html" ><img class="homeimage" src="img/house.png"  /></a >
-	<a  class="subb" class="buton_calc" href="index1.html"> Энтальпии </a >
-	<a class="subb" href="index4.html" class="buton_calc" > Влагосодержание </a >
-	<div  class="subbENRURO"><a class="buton_ENRURO" href=".html"> EN</a ><a class="buton_ENRURO" href=".html"> MD</a ></div>
+		<div class="home"><a class="subbHome2" href="indexMD.html" ><img class="homeimage2" src="img/house.png"  /></a ></div>
 	</div>
 	        <div class="app" >
-                
-					<div class="resurs" id="resurs">Список параметров оборудования:</div>
+       
+					<div class="resurs" id="resurs">Parametrele echipamentului:</div>
 					<div  class="center">
 					<form>
 					<tr  ><!--razmer,obiem,gabariti,vlagosoderjanie,cena;-->
-					<div class="numeration_resurs1">Высота, м &nbsp&nbsp&nbsp&nbsp  </div>
-					<div class="numeration_resurs1">Вн. объем, м<sup><small>3</sup></small> &nbsp&nbsp&nbsp&nbsp </div>
-					<div class="numeration_resurs1">Вн. габариты, м. &nbsp&nbsp&nbsp&nbsp </div>
-					<div class="numeration_resurs1" >Цена, Р &nbsp&nbsp&nbsp&nbsp  </div><br>
-					
+					<div class="numeration_resurs1">Inalțimea, м &nbsp&nbsp&nbsp&nbsp  </div>
+					<div class="numeration_resurs1">In. volum, м<sup><small>3</sup></small> &nbsp&nbsp&nbsp&nbsp </div>
+					<div class="numeration_resurs1">In. dimensiuni, м. &nbsp&nbsp&nbsp&nbsp </div>
+					<div class="numeration_resurs1" >Preț, € &nbsp&nbsp&nbsp&nbsp  </div><br>
+					<hr>
 					<div class="numeration_resurs" id="tr11" ></div>
 					<div class="numeration_resurs" id="tr12" ></div>
 					<div class="numeration_resurs" id="tr13" ></div>
-					<div class="numeration_resurs" id="tr14" ></div><br>
+					<div class="numeration_resurs" id="tr14" ></div>
+					<hr><br>
 					
 					<div class="numeration_resurs" id="tr21" ></div>
 					<div class="numeration_resurs" id="tr22" ></div>
 					<div class="numeration_resurs" id="tr23" ></div>
-					<div class="numeration_resurs" id="tr24" ></div><br>
+					<div class="numeration_resurs" id="tr24" ></div>
+					<hr><br>
 					
 					<div class="numeration_resurs" id="tr31" ></div>
 					<div class="numeration_resurs" id="tr32" ></div>
 					<div class="numeration_resurs" id="tr33" ></div>
-					<div class="numeration_resurs" id="tr34" ></div><br>
+					<div class="numeration_resurs" id="tr34" ></div>
+					<hr><br>
 					
 					<div class="numeration_resurs" id="tr41" ></div>
 					<div class="numeration_resurs" id="tr42" ></div>
 					<div class="numeration_resurs" id="tr43" ></div>
-					<div class="numeration_resurs" id="tr44" ></div><br>
+					<div class="numeration_resurs" id="tr44" ></div>
+					<hr><br>
 					
 					<div class="numeration_resurs" id="tr51" ></div>
 					<div class="numeration_resurs" id="tr52" ></div>
 					<div class="numeration_resurs" id="tr53" ></div>
-					<div class="numeration_resurs" id="tr54" ></div><br>
+					<div class="numeration_resurs" id="tr54" ></div>
+					<hr><br>
 					
 					<div class="numeration_resurs" id="tr61" ></div>
 					<div class="numeration_resurs" id="tr62" ></div>
 					<div class="numeration_resurs" id="tr63" ></div>
-					<div class="numeration_resurs" id="tr64" ></div><br>
+					<div class="numeration_resurs" id="tr64" ></div>
+					<hr><br>
 					
 				<!--<div class="numeration_resurs" id="tr71" ></div>
 					<div class="numeration_resurs" id="tr72" ></div>
@@ -185,14 +189,14 @@
 					</tr>
 					</form>
 					</div>
-					<div class="center"><strong>Стандартная комплектация </strong>
-					<div class="numeration"> <strong>-</strong>крашенная (RAL 9003) оцинкованная сталь толщиной 0,45-0,5 мм с защитной пленкой, удаляемой после монтажа<div>
-<div class="numeration"> <strong>-</strong>половые панели с покрытием из оцинкованной стали толщиной 1,0 - 1,2 мм<div>
-<div class="numeration"> <strong>-</strong>среднетемпературная * распашная одностворчатая дверь со световым проемом 800*1800 мм<div>
-<div class="numeration"> <strong>-</strong>ручка-замок с устройством аварийного открывания<div>
-<div class="numeration"> <strong>-</strong>комплект электрофурнитуры (светильник, кабель, выключатель, крепежные элементы)<div>
-<div class="numeration"> <strong>-</strong>камера собирается из готовых панелей с помощью экцентриковых замков<div>
-<div class="numeration"> * - под заказ комплектуется низкотемпературной дверью со световым проемом 800*1800 мм<div>
+					<div class="center"><strong>Echipament include :</strong>
+					<div class="numeration"> <strong>-</strong>&nbsp vopsite (RAL 9003), oțel galvanizat 0,45-0,5 mm grosime, cu un protector care este îndepărtat după instalare</div>
+<div class="numeration"> <strong>-</strong>&nbsp panouri de pardoseală cu oțel zincat de acoperire, grosime 1.0-1.2 mm</div>
+<div class="numeration"> <strong>-</strong>&nbsp mediu de temperatură * balamale cu o singură ușă, cu o deschidere de lumină de 800 * 1800 mm</div>
+<div class="numeration"> <strong>-</strong>&nbsp Pen-blocare cu dispozitiv de deschidere de urgență</div>
+<div class="numeration"> <strong>-</strong>&nbsp Kit electrica (lampă, cablu, comutator, elemente de fixare)</div>
+<div class="numeration"> <strong>-</strong>&nbsp Aparat de fotografiat este asamblat din panouri prefabricate folosind încuietori ektsentrikovyh</div>
+<div class="numeration"> * -&nbsp Comanda este completată cu o temperatură scăzută, cu o deschidere a ușii de lumină 800 * 1800 mm</div>
 </div>
         </div>
        

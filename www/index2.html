@@ -11,12 +11,21 @@
         <title>Entalphi calculator</title>
     </head>
     <body>
-	<div class="blik2">	
-	<a class="subbHome" href="indexEN.html" ><img class="homeimage" src="img/house.png"  /></a >
-	<a class="subb" class="buton_calc" href="index2.html"> Entalphy </a >
-	<a class="subb" class="buton_calc" href="index5.html"> Moisture content  </a >
-	<div class="subbENRURO"><a class="buton_ENRURO" href="index1.html"> RU</a ><a class="buton_ENRURO" href="index3.html"> MD</a ></div>
-	</div>
+	<div class="shapka_home" >
+			
+				<a  href="indexEN.html">
+					<div class="shapka_vnutr"><img class="homeimage" src="img/house.png"  /> 	</div>
+				</a ></div>
+				<div class="shapka">
+				<a  href="index2.html">
+					<div class="subb_select">Entalphy 	</div>
+				</a >
+		 </div>	
+		 <div class="shapka">
+				<a  href="index5.html">
+					<div class="shapka_vnutr2">Moisture content 	</div>
+				</a >
+		 </div>	
 
 	        <div class="app" >
             <div class="blink">
@@ -90,7 +99,7 @@
 									 <option >russian boiled sausage</option>
 									 <option >sausage sausage cooked and smoked</option>
 								</select><br>
-								
+								<output id="error0"></output>
 								<div id="hidden_div" style="display: none;"><p>
 <p class="chart_div">Select formula
 
@@ -99,9 +108,9 @@
 									 <option >Chizhov</option>
 									 </select>
 	<br><div>C<small><small>ryoscopic temperature</small></small></div>
-  <input type="number" class="input" id="crio" max="0,01" min="-5"><output> &ordm С</output><br><br>
+  <input type="number" class="input" id="crio" onchange="validation()" max="0,01" min="-5"><output> &ordm С</output><output id="errorCrio"></output><br><div id="crios" class="chart_div">Limitation  [-5  0.01]</div><br>
 	<div>W<small><small>ater content</small></small></div>
-  <input type="number" class="input" id="sod_vodi" max="1" min="0"><output class="chart_div"> prop. units</output><br>
+  <input type="number" class="input" id="sod_vodi" onchange="validation()" max="1" min="0"><output class="textnormal"> prop. units</output><output id="errorVoda"></output><br><div id="vodos" class="chart_div">Ограничение  [0   1]</div>
 	</div>
 
 <script>
@@ -112,22 +121,27 @@ document.getElementById('name').addEventListener('change', function () {
 </script>
 
 							<br>I<small><small>nitial temperature:</small></small>:<br>
-								<input  class="input" id="first" name="firsttemp" type="number" max="100" min="-60" > <output> &ordm С</output><output id="error1"> </output><br>
+								<input  class="input" id="first" name="firsttemp" onchange="validation();empty();" type="number" max="100" min="-60" > <output> &ordm С</output><output id="error1"> </output><br>
 								<div id="gran1" class="chart_div">Limitation  [-60   100]</div>
 											
 	 					F<small><small>inal temperature:</small></small>:<br>
-							<input  class="input" id="last" name="lasttemp" type="number" max="100" min="-60"><output> &ordm С</output><output id="error2"> </output><br>
+							<input  class="input" id="last" name="lasttemp" type="number" onchange="validation();empty();" max="100" min="-60"><output> &ordm С</output><output id="error2"> </output><br>
 									<div id="gran2" class="chart_div">Limitation  [-60   100]</div>
 										
 							<input type="button" class="out" id="btn" value="Calculate the enthalpy difference" ><br><br>
-								
-								<div>N<small><small>ame Product</small></small></div>	
-									<input class="out" id="name_prod" name="return" readonly><br><br>
+								<hr>
+							<!--	<div>N<small><small>ame Product</small></small></div>	
+									<input class="out" id="name_prod" name="return" readonly><br><br>-->
 									
-								<div>E<small><small>nthalpy difference</small></small></div>
-									<input  class="out" id="vv" name="return" readonly><br><br>
-									<input type="button" onclick="go()" value="Continue calculate"></input>
+								<output>E<small><small>nthalpy difference</small></small></output>
+									<output  class="out" id="vv" name="return" readonly></output><br><br>
+									<input type="button" onclick="repeat()" value="New calcalate"></input><input type="button" onclick="go()" value="Continue calculate"></input>
 							</form>  
+							<script>
+							function repeat() {
+							document.location = "index2.html";
+							}
+							</script>
 							<script>
 							function go() {
 							document.location = "index5.html?id=" + document.getElementById("vv").value;

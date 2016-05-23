@@ -1,22 +1,232 @@
 function Name_Product(){
 		var m=document.getElementById("name");
-		var v=document.getElementById("name_prod");
-							v.value=m.value;
+		//var v=document.getElementById("name_prod");
+						//	v.value=m.value;
 							var as=document.getElementById("crio").value;
 							var dis=document.getElementById("sod_vodi").value;
-							if(m.value=="1")
+						
+					if(m.value=="1")
 					{
-						v.value="Not in the list or unknown";
+						//v.value="Not in the list or unknown";
+						error0.value="";
+						if(as>0.01||as<-5)
+						{
+							if(as>0.01)
+							{
+								crios.value=0.01;}
+							if(as<-5)
+							{crios.value=-5;}
+						}
+						if(dis>1||dis<0)
+						{
+							if(dis>1)
+							{vodos.value=1;}
+							if(dis<0)
+							{vodos.value=0;}
+						}
+						
+						if(erste>100||erste<-50)
+						{
+							//v.value="";
+							if(erste>100)
+							{first.value=100;}
+							if(erste<-50)
+							{first.value=-50;}
+						}
+						if(zweite>100||zweite<-50)
+						{
+							//v.value="";
+							if(zweite>100)
+							{last.value=100;}
+							if(zweite<-50)
+							{last.value=-50;}
+						}
+						
 					}
-					else if(m.value==" - Select product -")
+					else if(m.value=="- Select product -")
 					{
-						v.value="";
+						error0.value=" Select product!";
+						//v.value="";
+						var erste=document.getElementById("first").value;
+				var zweite=document.getElementById("last").value;
+				var croi_prov=document.getElementById("crio").value;
+				var voda_prov=document.getElementById("sod_vodi").value;
+if(erste==""){ 
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="  Enter number!";
+			document.getElementById("error2").value="";
+return false;}
+else if(zweite==""){
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="  Enter number!";
+return false;}
+if(croi_prov==""){ 
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value=" Enter number!";
+			document.getElementById("errorVoda").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else if(voda_prov==""){
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="";
+			document.getElementById("errorVoda").value="  Enter number!";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else{
+	//errorCrio   errorVoda
+	document.getElementById("errorCrio").value="";
+	document.getElementById("errorVoda").value="";
+document.getElementById("error1").value="";
+document.getElementById("error2").value="";
+}
 					}
+					else{error0.value="";}
 		if(as!=""&dis!="")
 		{
-			v.value="";
+			error0.value="";
+			//v.value="";
 		}
 				 }
+				 
+				 
+function validation()
+{
+	
+var m=document.getElementById("name");
+				//var name=document.getElementById("name_prod");
+				var v=document.getElementById("vv");
+				var erste=document.getElementById("first").value;
+				var first=document.getElementById("first");
+				var zweite=document.getElementById("last").value;
+				var last=document.getElementById("last");
+				var error1=document.getElementById("error1");
+				var error2=document.getElementById("error2");
+				
+				var error0=document.getElementById("error0");
+					var as=document.getElementById("crio").value;
+					var crios=document.getElementById("crio");
+					var vodos=document.getElementById("sod_vodi");
+					var dis=document.getElementById("sod_vodi").value;
+					var erorCrio=document.getElementById("errorCrio");
+					var erorVoda=document.getElementById("errorVoda");
+						
+	
+	if(m.value=="1")
+	{
+								
+						if(as>0.01||as<-5)
+						{
+							if(as>0.01)
+							{
+								crios.value=0.01;}
+							if(as<-5)
+							{crios.value=-5;}
+						}
+						if(dis>1||dis<0)
+						{
+							if(dis>1)
+							{vodos.value=1;}
+							if(dis<0)
+							{vodos.value=0;}
+						}
+		if(erste>100||erste<-50)
+	{
+		v.value="";
+		//name.value="";
+		if(erste>100)
+		{first.value=100;}
+		if(erste<-50)
+		{first.value=-50;}
+	error0.value="";
+	}
+	if(zweite>100||zweite<-50)
+	{
+		v.value="";
+		//name.value="";
+		if(zweite>100)
+		{last.value=100;}
+		if(zweite<-50)
+		{last.value=-50;}
+	error0.value="";
+	}
+	}
+	else //(m.value!="- Выберите продукт -")
+	{
+		
+	if(erste>100||erste<-60)
+	{
+		v.value="";
+		//name.value="";
+		if(erste>100)
+		{first.value=100;}
+		if(erste<-60)
+		{first.value=-60;}
+	error0.value="";
+	}
+	if(zweite>100||zweite<-60)
+	{
+		v.value="";
+		//name.value="";
+		if(zweite>100)
+		{last.value=100;}
+		if(zweite<-60)
+		{last.value=-60;}
+	error0.value="";
+	}
+	}
+}				 
+				 
+
+	
+function empty()
+{
+	var erste=document.getElementById("first").value;
+				var zweite=document.getElementById("last").value;
+				var croi_prov=document.getElementById("crio").value;
+				var voda_prov=document.getElementById("sod_vodi").value;
+if(erste==""){ 
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="  Enter number!";
+			document.getElementById("error2").value="";
+return false;}
+else if(zweite==""){
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="  Enter number!";
+return false;}
+if(croi_prov==""){ 
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="  Enter number!";
+			document.getElementById("errorVoda").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else if(voda_prov==""){
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="";
+			document.getElementById("errorVoda").value="  Enter number!";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else{
+	//errorCrio   errorVoda
+	document.getElementById("errorCrio").value="";
+	document.getElementById("errorVoda").value="";
+document.getElementById("error1").value="";
+document.getElementById("error2").value="";
+}
+}
 				 
 function finish(){
 var graph1=[];
@@ -34,8 +244,8 @@ var graph1=[];
 var temp=new Array(213.0,214.0,215.0,216.0,217.0,218.0,219.0,220.0,221.0,222.0,223.0,224.0,225.0,226.0,227.0,228.0,229.0,230.0,231.0,232.0,233.0,234.0,235.0,236.0,237.0,238.0,239.0,240.0,241.0,242.0,243.0,244.0,245.0,246.0,247.0,248.0,249.0,250.0,251.0,252.0,253.0,254.0,255.0,256.0,257.0,258.0,259.0,260.0,261.0,262.0,263.0,264.0,265.0,266.0,267.0,268.0,269.0,270.0,271.0,271.7,273.0,274.0,275.0,276.0,277.0,278.0,279.0,280.0,281.0,282.0,283.0,284.0,285.0,286.0,287.0,288.0,289.0,290.0,291.0,292.0,293.0,294.0,295.0,296.0,297.0,298.0,299.0,300.0,301.0,302.0,303.0,304.0,305.0,306.0,307.0,308.0,309.0,310.0,311.0,312.0,313.0,314.0,315.0,316.0,317.0,318.0,319.0,320.0,321.0,322.0,323.0,324.0,325.0,326.0,327.0,328.0,329.0,330.0,331.0,332.0,333.0,334.0,335.0,336.0,337.0,338.0,339.0,340.0,341.0,342.0,343.0,344.0,345.0,346.0,347.0,348.0,349.0,350.0,351.0,352.0,353.0,354.0,355.0,356.0,357.0,358.0,359.0,360.0,361.0,362.0,363.0,364.0,365.0,366.0,367.0,368.0,369.0,370.0,371.0,372.0,373.0);
 for(var i=0;i<temp.length;i++)
 {
-	var a=temp[i]-273;
-	graph1.push(a);
+	var c=temp[i]-273;
+	graph1.push(c);
 }
 
 var croi_prov=document.getElementById("crio").value;
@@ -127,7 +337,9 @@ for (j= 1; j< 1601; j++)   //  запускаем цикл интегриров�
   }
   }
 		var v=document.getElementById("vv");
-		v.value=((resultat_Raul1-resultat_Raul)/1000).toFixed(6);
+		var itog=((resultat_Raul1-resultat_Raul)/1000).toFixed(1);
+		if(itog<0){itog=itog*(-1);}
+		v.value=itog;
 		}
 		break;
 		
@@ -218,13 +430,19 @@ for (j= 1; j< 1601; j++)   //  запускаем цикл интегриров�
   }
   }
 		var v=document.getElementById("vv");
-		v.value=((resultat_Cijov1-resultat_Cijov)/1000).toFixed(6);
+		var itog=((resultat_Cijov1-resultat_Cijov)/1000).toFixed(1);
+		if(itog<0){itog=itog*(-1);}
+		v.value=itog;
 		}
 		break;
 		default:{}break;
 	};
 }
-else{
+else if(erste!=""&zweite!=""||erste!=""&&zweite!=""){
+	document.getElementById("errorCrio").value="";
+	document.getElementById("errorVoda").value="";
+document.getElementById("error1").value="";
+document.getElementById("error2").value="";
 	mim=Math.round(mim);
 	nin=Math.round(nin);
 switch(document.getElementById("name").value)
@@ -254,7 +472,7 @@ case"apricots":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"quince":{
@@ -282,7 +500,7 @@ case"quince":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;						
+ v.value=resultall.toFixed(1);;						
 };
 	break;
 case"pineapples":{
@@ -309,7 +527,7 @@ case"pineapples":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"oranges":{
@@ -336,7 +554,7 @@ case"oranges":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"watermelons":{
@@ -363,7 +581,7 @@ case"watermelons":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"artichokes":{
@@ -390,7 +608,7 @@ case"artichokes":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"eggplant":{
@@ -417,7 +635,7 @@ case"eggplant":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"bananas":{
@@ -444,7 +662,7 @@ case"bananas":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"lamb above average fatness":
@@ -472,7 +690,7 @@ case"lamb above average fatness":
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"lamb below the average fatness":
@@ -500,7 +718,7 @@ case"lamb below the average fatness":
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;	
 case"lamb average fatness":
@@ -528,7 +746,7 @@ case"lamb average fatness":
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"pulse":{
@@ -555,7 +773,7 @@ case"pulse":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"broccoli":{
@@ -582,7 +800,7 @@ case"broccoli":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"butter a loaf":{
@@ -610,7 +828,7 @@ case"butter a loaf":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"dessert wine":{
@@ -637,7 +855,7 @@ case"dessert wine":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"fortified wine":{
@@ -664,7 +882,7 @@ case"fortified wine":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"dry wine":{
@@ -691,7 +909,7 @@ case"dry wine":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"grapes":{
@@ -718,7 +936,7 @@ case"grapes":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"cherry":{
@@ -745,7 +963,7 @@ case"cherry":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"water":{
@@ -772,7 +990,7 @@ case"water":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"beef I category":{
@@ -799,7 +1017,7 @@ case"beef I category":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"beef II category":{
@@ -826,7 +1044,7 @@ case"beef II category":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"boiled beef":{
@@ -853,7 +1071,7 @@ case"boiled beef":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"beef bone":{
@@ -880,7 +1098,7 @@ case"beef bone":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"peas":{
@@ -907,7 +1125,7 @@ case"peas":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"grapefruit":{
@@ -934,7 +1152,7 @@ case"grapefruit":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"mushrooms":{
@@ -961,7 +1179,7 @@ case"mushrooms":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"pear":{
@@ -988,7 +1206,7 @@ case"pear":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"melon":{
@@ -1015,7 +1233,7 @@ case"melon":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"milk replacer ":{
@@ -1042,7 +1260,7 @@ case"milk replacer ":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"tom-turkey":{
@@ -1069,7 +1287,7 @@ case"tom-turkey":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"cocoa with condensed milk and sugar":{
@@ -1096,7 +1314,7 @@ case"cocoa with condensed milk and sugar":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"white cabbage":{
@@ -1123,7 +1341,7 @@ case"white cabbage":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"brussels cabbage":{
@@ -1150,7 +1368,7 @@ case"brussels cabbage":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"sauerkraut":{
@@ -1177,7 +1395,7 @@ case"sauerkraut":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"savoy cabbage":{
@@ -1204,7 +1422,7 @@ case"savoy cabbage":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"cauliflower":{
@@ -1231,7 +1449,7 @@ case"cauliflower":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"potato":{
@@ -1258,7 +1476,7 @@ case"potato":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"fat yogurt 3,2%":{
@@ -1285,7 +1503,7 @@ case"fat yogurt 3,2%":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"low-fat yogurt 0%":{
@@ -1312,7 +1530,7 @@ case"low-fat yogurt 0%":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"tallinn kefir 1%":{
@@ -1339,7 +1557,7 @@ case"tallinn kefir 1%":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"strawberry":{
@@ -1366,7 +1584,7 @@ case"strawberry":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"cranberry":{
@@ -1393,7 +1611,7 @@ case"cranberry":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"semi-smoked sausages Armavir":{
@@ -1420,7 +1638,7 @@ case"semi-smoked sausages Armavir":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"boiled beef sausage":{
@@ -1447,7 +1665,7 @@ case"boiled beef sausage":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"sausage delicacy boiled-smoked":{
@@ -1474,7 +1692,7 @@ case"sausage delicacy boiled-smoked":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"sausage diabetic boiled":{
@@ -1501,7 +1719,7 @@ case"sausage diabetic boiled":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"doctoral sausage boiled":{
@@ -1528,7 +1746,7 @@ case"doctoral sausage boiled":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"registered sausage cooked and smoked":{
@@ -1555,7 +1773,7 @@ case"registered sausage cooked and smoked":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"krasnodar boiled sausage":{
@@ -1582,7 +1800,7 @@ case"krasnodar boiled sausage":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"boiled sausage amateur":{
@@ -1609,7 +1827,7 @@ case"boiled sausage amateur":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"amateur sausage cooked and smoked":{
@@ -1636,7 +1854,7 @@ case"amateur sausage cooked and smoked":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"amateur sausage cooked pork":{
@@ -1663,7 +1881,7 @@ case"amateur sausage cooked pork":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"smoked sausage Maikop":{
@@ -1690,7 +1908,7 @@ case"smoked sausage Maikop":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"milk boiled sausage":{
@@ -1717,7 +1935,7 @@ case"milk boiled sausage":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"moscow boiled sausage":{
@@ -1744,7 +1962,7 @@ case"moscow boiled sausage":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"moscow sausage cooked and smoked":{
@@ -1771,7 +1989,7 @@ case"moscow sausage cooked and smoked":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"smoked sausage moscow":{
@@ -1798,7 +2016,7 @@ case"smoked sausage moscow":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"smoked sausage special":{
@@ -1825,7 +2043,7 @@ case"smoked sausage special":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"semi-smoked sausage poltava":{
@@ -1852,7 +2070,7 @@ case"semi-smoked sausage poltava":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"rostov sausage cooked and smoked":{
@@ -1879,7 +2097,7 @@ case"rostov sausage cooked and smoked":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"russian boiled sausage":{
@@ -1906,7 +2124,7 @@ case"russian boiled sausage":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"sausage sausage cooked and smoked":{
@@ -1933,7 +2151,7 @@ case"sausage sausage cooked and smoked":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 	

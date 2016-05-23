@@ -11,12 +11,21 @@
         <title>Calculatorul entalpii</title>
     </head>
     <body>
-	<div class="blik2">	
-	<a class="subbHome" href="indexMD.html" ><img class="homeimage" src="img/house.png"  /></a >
-	<a class="subb" class="buton_calc" href="index3.html"> Entalpii </a >
-	<a class="subb" class="buton_calc" href="index6.html"> conținutul de umiditate </a >
-	<div class="subbENRURO"><a class="buton_ENRURO" href="index1.html"> RU</a ><a class="buton_ENRURO" href="index2.html"> EN</a ></div>
-	</div>
+	<div class="shapka_home" >
+			
+				<a  href="indexMD.html">
+					<div class="shapka_vnutr"><img class="homeimage" src="img/house.png"  /> 	</div>
+				</a ></div>
+				<div class="shapka">
+				<a  href="index3.html">
+					<div class="subb_select">Entalpii 	</div>
+				</a >
+		 </div>	
+		 <div class="shapka">
+				<a  href="index6.html">
+					<div class="shapka_vnutr2">Conținutul de umiditate 	</div>
+				</a >
+		 </div>	
 
 	        <div class="app" >
             <div class="blink">
@@ -91,6 +100,7 @@
 									 <option >mezeluri fierte și afumate cârnați</option>
 									
 								</select><br>
+								<output id="error0"></output>
 	<div id="hidden_div" style="display: none;"><p>
 <p class="chart_div">Selectați formula
 
@@ -99,9 +109,9 @@
 									 <option >Cijov</option>
 									 </select>
 	<br><div>T<small><small>emperatura cryoscopica</small></small></div>
-  <input type="number" class="input" id="crio" max="0,01" min="-5"><output> &ordm С</output><br><br>
+  <input type="number" class="input" id="crio" onchange="validation()" max="0,01" min="-5"><output> &ordm С</output><output id="errorCrio"></output><br><div id="crios" class="chart_div">Ограничение  [-5  0.01]</div><br>
 	<div>C<small><small>onținut de apă</small></small></div>
-  <input type="number" class="input" id="sod_vodi" max="1" min="0"><output class="textnormal"> Unități</output><br>
+  <input type="number" class="input" id="sod_vodi" onchange="validation()" max="1" min="0"><output class="textnormal"> Unități</output><output id="errorVoda"></output><br><div id="vodos" class="chart_div">Ограничение  [0   1]</div>
 	</div>
 
 <script>
@@ -111,26 +121,31 @@ document.getElementById('name').addEventListener('change', function () {
 });
 </script>
 							<br>T<small><small>emperatură inițială:</small></small>:<br>
-								<input class="input"  id="first" name="firsttemp" type="number" max="100" min="-60" > <output> &ordm С</output><output id="error1"> </output><br>
+								<input class="input"  id="first" name="firsttemp" type="number" onchange="validation();empty();" max="100" min="-60" > <output> &ordm С</output><output id="error1"> </output><br>
 								<div id="gran1" class="chart_div">Restricție  [-60   100]</div>
 											
 	 						T<small><small>emperatură finală:</small></small>:<br>
-								<input  class="input" id="last" name="lasttemp" type="number" max="100" min="-60"><output> &ordm С</output><output id="error2"> </output><br>
+								<input  class="input" id="last" name="lasttemp" type="number" onchange="validation();empty();" max="100" min="-60"><output> &ordm С</output><output id="error2"> </output><br>
 									<div id="gran2" class="chart_div">Restricție  [-60   100]</div>
 									
 							
 						<input type="button" class="out" id="btn" value="A calcula diferența entalpii"><br><br>
-						
-						<div>D<small><small>enumirea produsului</small></small></div>	
-							<input class="out" id="name_prod" name="return" readonly><br><br>
+						<hr>
+						<!--<div>D<small><small>enumirea produsului</small></small></div>	
+							<input class="out" id="name_prod" name="return" readonly><br><br>-->
 				
 						<div>D<small><small>iferența entalpii</small></small></div>			
 							<input  class="out" id="vv" name="return" readonly><br><br>
-							<input type="button" onclick="go()" value="prelungirea calcularii"></input>
+							<input type="button" onclick="repeat()" value="Nou calcul"></input><input type="button" onclick="go()" value="Prelungirea calcularii"></input>
 						</form>  
 							<script>
 							function go() {
 							document.location = "index6.html?id=" + document.getElementById("vv").value;
+							}
+							</script>
+							<script>
+							function repeat() {
+							document.location = "index3.html";
 							}
 							</script>
 						</ul>

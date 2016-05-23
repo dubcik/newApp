@@ -1,26 +1,230 @@
 function Name_Product(){
 		var m=document.getElementById("name");
-		var v=document.getElementById("name_prod");
-							v.value=m.value;
+		//var v=document.getElementById("name_prod");
+						//	v.value=m.value;
 							var as=document.getElementById("crio").value;
 							var dis=document.getElementById("sod_vodi").value;
+										
 					if(m.value=="1")
 					{
-						v.value="Nu este în listă sau necunoscut";
+						//v.value="Nu este în listă sau necunoscut";
+						error0.value="";
+						if(as>0.01||as<-5)
+						{
+							if(as>0.01)
+							{
+								crios.value=0.01;}
+							if(as<-5)
+							{crios.value=-5;}
+						}
+						if(dis>1||dis<0)
+						{
+							if(dis>1)
+							{vodos.value=1;}
+							if(dis<0)
+							{vodos.value=0;}
+						}
+						
+						if(erste>100||erste<-50)
+						{
+							//v.value="";
+							if(erste>100)
+							{first.value=100;}
+							if(erste<-50)
+							{first.value=-50;}
+						}
+						if(zweite>100||zweite<-50)
+						{
+							//v.value="";
+							if(zweite>100)
+							{last.value=100;}
+							if(zweite<-50)
+							{last.value=-50;}
+						}
+						
 					}
-					else if(m.value==" - Selectați produsul -")
+					else if(m.value=="- Selectați produsul -")
 					{
-						v.value="";
+						error0.value="Selectați produsul!";
+						//v.value="";
+						var erste=document.getElementById("first").value;
+				var zweite=document.getElementById("last").value;
+				var croi_prov=document.getElementById("crio").value;
+				var voda_prov=document.getElementById("sod_vodi").value;
+if(erste==""){ 
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="  Tastaţi numărul!";
+			document.getElementById("error2").value="";
+return false;}
+else if(zweite==""){
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="  Tastaţi numărul!";
+return false;}
+if(croi_prov==""){ 
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="  Tastaţi numărul!";
+			document.getElementById("errorVoda").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else if(voda_prov==""){
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="";
+			document.getElementById("errorVoda").value="  Tastaţi numărul!";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else{
+	//errorCrio   errorVoda
+	document.getElementById("errorCrio").value="";
+	document.getElementById("errorVoda").value="";
+document.getElementById("error1").value="";
+document.getElementById("error2").value="";
+}
 					}
+					else{error0.value="";}
 		if(as!=""&dis!="")
 		{
-			v.value="";
+			error0.value="";
+			//v.value="";
 		}
+					
 				 }
 				 
+	function validation()
+{			var m=document.getElementById("name");
+				//var name=document.getElementById("name_prod");
+				var v=document.getElementById("vv");
+				var erste=document.getElementById("first").value;
+				var first=document.getElementById("first");
+				var zweite=document.getElementById("last").value;
+				var last=document.getElementById("last");
+				var error1=document.getElementById("error1");
+				var error2=document.getElementById("error2");
+				
+				var error0=document.getElementById("error0");
+					var as=document.getElementById("crio").value;
+					var crios=document.getElementById("crio");
+					var vodos=document.getElementById("sod_vodi");
+					var dis=document.getElementById("sod_vodi").value;
+					var erorCrio=document.getElementById("errorCrio");
+					var erorVoda=document.getElementById("errorVoda");
+							
+	if(m.value=="1")
+	{
+								
+						if(as>0.01||as<-5)
+						{
+							if(as>0.01)
+							{
+								crios.value=0.01;}
+							if(as<-5)
+							{crios.value=-5;}
+						}
+						if(dis>1||dis<0)
+						{
+							if(dis>1)
+							{vodos.value=1;}
+							if(dis<0)
+							{vodos.value=0;}
+						}
+		if(erste>100||erste<-50)
+	{
+		v.value="";
+		//name.value="";
+		if(erste>100)
+		{first.value=100;}
+		if(erste<-50)
+		{first.value=-50;}
+	error0.value="";
+	}
+	if(zweite>100||zweite<-50)
+	{
+		v.value="";
+		//name.value="";
+		if(zweite>100)
+		{last.value=100;}
+		if(zweite<-50)
+		{last.value=-50;}
+	error0.value="";
+	}
+	}
+	else //(m.value!="- Выберите продукт -")
+	{
+		
+	if(erste>100||erste<-60)
+	{
+		v.value="";
+		//name.value="";
+		if(erste>100)
+		{first.value=100;}
+		if(erste<-60)
+		{first.value=-60;}
+	error0.value="";
+	}
+	if(zweite>100||zweite<-60)
+	{
+		v.value="";
+		//name.value="";
+		if(zweite>100)
+		{last.value=100;}
+		if(zweite<-60)
+		{last.value=-60;}
+	error0.value="";
+	}
+	}
+}				 
 				 
 
 	
+function empty()
+{
+	var erste=document.getElementById("first").value;
+				var zweite=document.getElementById("last").value;
+				var croi_prov=document.getElementById("crio").value;
+				var voda_prov=document.getElementById("sod_vodi").value;
+if(erste==""){ 
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="  Tastaţi numărul!";
+			document.getElementById("error2").value="";
+return false;}
+else if(zweite==""){
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="  Tastaţi numărul!";
+return false;}
+if(croi_prov==""){ 
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="  Tastaţi numărul!";
+			document.getElementById("errorVoda").value="";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else if(voda_prov==""){
+			document.getElementById("vv").value="";
+			//document.getElementById("name_prod").value="";
+			document.getElementById("errorCrio").value="";
+			document.getElementById("errorVoda").value="  Tastaţi numărul!";
+			document.getElementById("error1").value="";
+			document.getElementById("error2").value="";
+return false;}
+else{
+	//errorCrio   errorVoda
+	document.getElementById("errorCrio").value="";
+	document.getElementById("errorVoda").value="";
+document.getElementById("error1").value="";
+document.getElementById("error2").value="";
+}
+}
+
 
 
 				 
@@ -40,8 +244,8 @@ function finish(){
 var temp=new Array(213.0,214.0,215.0,216.0,217.0,218.0,219.0,220.0,221.0,222.0,223.0,224.0,225.0,226.0,227.0,228.0,229.0,230.0,231.0,232.0,233.0,234.0,235.0,236.0,237.0,238.0,239.0,240.0,241.0,242.0,243.0,244.0,245.0,246.0,247.0,248.0,249.0,250.0,251.0,252.0,253.0,254.0,255.0,256.0,257.0,258.0,259.0,260.0,261.0,262.0,263.0,264.0,265.0,266.0,267.0,268.0,269.0,270.0,271.0,271.7,273.0,274.0,275.0,276.0,277.0,278.0,279.0,280.0,281.0,282.0,283.0,284.0,285.0,286.0,287.0,288.0,289.0,290.0,291.0,292.0,293.0,294.0,295.0,296.0,297.0,298.0,299.0,300.0,301.0,302.0,303.0,304.0,305.0,306.0,307.0,308.0,309.0,310.0,311.0,312.0,313.0,314.0,315.0,316.0,317.0,318.0,319.0,320.0,321.0,322.0,323.0,324.0,325.0,326.0,327.0,328.0,329.0,330.0,331.0,332.0,333.0,334.0,335.0,336.0,337.0,338.0,339.0,340.0,341.0,342.0,343.0,344.0,345.0,346.0,347.0,348.0,349.0,350.0,351.0,352.0,353.0,354.0,355.0,356.0,357.0,358.0,359.0,360.0,361.0,362.0,363.0,364.0,365.0,366.0,367.0,368.0,369.0,370.0,371.0,372.0,373.0);
 for(var i=0;i<temp.length;i++)
 {
-	var a=temp[i]-273;
-	graph1.push(a);
+	var c=temp[i]-273;
+	graph1.push(c);
 }
 
 var croi_prov=document.getElementById("crio").value;
@@ -134,7 +338,9 @@ for (j= 1; j< 1601; j++)   //  запускаем цикл интегриров�
   }
   }
 		var v=document.getElementById("vv");
-		v.value=((resultat_Raul1-resultat_Raul)/1000).toFixed(6);
+		var itog=((resultat_Raul1-resultat_Raul)/1000).toFixed(1);
+		if(itog<0){itog=itog*(-1);}
+		v.value=itog;
 		}
 		break;
 		
@@ -226,13 +432,15 @@ for (j= 1; j< 1601; j++)   //  запускаем цикл интегриров�
   }
   }
 		var v=document.getElementById("vv");
-		v.value=((resultat_Cijov1-resultat_Cijov)/1000).toFixed(6);
+		var itog=((resultat_Cijov1-resultat_Cijov)/1000).toFixed(1);
+		if(itog<0){itog=itog*(-1);}
+		v.value=itog;
 		}
 		break;
 		default:{}break;
 	};
 }
-else{
+else if(erste!=""&zweite!=""||erste!=""&&zweite!=""){
 	mim=Math.round(mim);
 	nin=Math.round(nin);
 switch(document.getElementById("name").value)
@@ -262,7 +470,7 @@ case"caise":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;
+ v.value=resultall.toFixed(1);
 };
 	break;
 case"gutuie":{
@@ -290,7 +498,7 @@ case"gutuie":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;						
+ v.value=resultall.toFixed(1);;						
 };
 	break;
 case"ananasul":{
@@ -317,7 +525,7 @@ case"ananasul":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"portocale":{
@@ -344,7 +552,7 @@ case"portocale":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"pepeni verzi":{
@@ -371,7 +579,7 @@ case"pepeni verzi":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"anghinare":{
@@ -398,7 +606,7 @@ case"anghinare":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"vânătă":{
@@ -425,7 +633,7 @@ case"vânătă":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"banane":{
@@ -452,7 +660,7 @@ case"banane":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"miel peste medie adipozitate":
@@ -480,7 +688,7 @@ case"miel peste medie adipozitate":
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"miel sub media ingrasarea":
@@ -508,7 +716,7 @@ case"miel sub media ingrasarea":
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;	
 case"miel adipozitate medie":
@@ -536,7 +744,7 @@ case"miel adipozitate medie":
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"puls":{
@@ -563,7 +771,7 @@ case"puls":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"broccoli":{
@@ -590,7 +798,7 @@ case"broccoli":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"pâine fantezie":{
@@ -618,7 +826,7 @@ case"pâine fantezie":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"vin de desert":{
@@ -645,7 +853,7 @@ case"vin de desert":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"vin alcoolizat":{
@@ -672,7 +880,7 @@ case"vin alcoolizat":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"vin sec":{
@@ -699,7 +907,7 @@ case"vin sec":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"struguri":{
@@ -726,7 +934,7 @@ case"struguri":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"vișina":{
@@ -753,7 +961,7 @@ case"vișina":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"apă":{
@@ -780,7 +988,7 @@ case"apă":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"carne de vită categoria I":{
@@ -807,7 +1015,7 @@ case"carne de vită categoria I":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"carne de vită categoria II":{
@@ -834,7 +1042,7 @@ case"carne de vită categoria II":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"vită fiartă":{
@@ -861,7 +1069,7 @@ case"vită fiartă":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"carne de vită os":{
@@ -888,7 +1096,7 @@ case"carne de vită os":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"mazăre":{
@@ -915,7 +1123,7 @@ case"mazăre":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"grapefruitul":{
@@ -942,7 +1150,7 @@ case"grapefruitul":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"ciuperci":{
@@ -969,7 +1177,7 @@ case"ciuperci":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"pere":{
@@ -996,7 +1204,7 @@ case"pere":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"pepeni galbeni":{
@@ -1023,7 +1231,7 @@ case"pepeni galbeni":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"întregul înlocuitor de lapte":{
@@ -1050,7 +1258,7 @@ case"întregul înlocuitor de lapte":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"curcan":{
@@ -1077,7 +1285,7 @@ case"curcan":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"cacao cu lapte condensat și zahăr":{
@@ -1104,7 +1312,7 @@ case"cacao cu lapte condensat și zahăr":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"varză albă":{
@@ -1131,7 +1339,7 @@ case"varză albă":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"varză de brusell":{
@@ -1158,7 +1366,7 @@ case"varză de brusell":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"varză acră":{
@@ -1185,7 +1393,7 @@ case"varză acră":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"varză creață":{
@@ -1212,7 +1420,7 @@ case"varză creață":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"conopidă":{
@@ -1239,7 +1447,7 @@ case"conopidă":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"cartofi":{
@@ -1266,7 +1474,7 @@ case"cartofi":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"chefir de grăsime 3,2%":{
@@ -1293,7 +1501,7 @@ case"chefir de grăsime 3,2%":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"scăzut de grăsimi chefir 0%":{
@@ -1320,7 +1528,7 @@ case"scăzut de grăsimi chefir 0%":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"chefir tallinn 1%":{
@@ -1347,7 +1555,7 @@ case"chefir tallinn 1%":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"căpșune":{
@@ -1374,7 +1582,7 @@ case"căpșune":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"merișor":{
@@ -1401,7 +1609,7 @@ case"merișor":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"mezeluri semi-afumate armavir":{
@@ -1428,7 +1636,7 @@ case"mezeluri semi-afumate armavir":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"cârnați de vită gătită":{
@@ -1455,7 +1663,7 @@ case"cârnați de vită gătită":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"cârnați delicatețe fierte afumate":{
@@ -1482,7 +1690,7 @@ case"cârnați delicatețe fierte afumate":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"fierte diabetici mezeluri":{
@@ -1509,7 +1717,7 @@ case"fierte diabetici mezeluri":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"fierte doctorat mezeluri":{
@@ -1536,7 +1744,7 @@ case"fierte doctorat mezeluri":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"cârnați, afumate fierte înregistrat":{
@@ -1563,7 +1771,7 @@ case"cârnați, afumate fierte înregistrat":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"mezeluri fierte krasnodar":{
@@ -1590,7 +1798,7 @@ case"mezeluri fierte krasnodar":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"cârnați fierte amatori":{
@@ -1617,7 +1825,7 @@ case"cârnați fierte amatori":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"mezeluri fierte si afumate amatori":{
@@ -1644,7 +1852,7 @@ case"mezeluri fierte si afumate amatori":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"amatori mezeluri fierte carne de porc":{
@@ -1671,7 +1879,7 @@ case"amatori mezeluri fierte carne de porc":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"afumat maikop mezeluri":{
@@ -1698,7 +1906,7 @@ case"afumat maikop mezeluri":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"mezeluri de lapte fierte":{
@@ -1725,7 +1933,7 @@ case"mezeluri de lapte fierte":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"mezeluri moscova fierte":{
@@ -1752,7 +1960,7 @@ case"mezeluri moscova fierte":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
- v.value=resultall;;
+ v.value=resultall.toFixed(1);;
 };
 	break;
 case"mezeluri moscova fierte si afumate":{
@@ -1779,7 +1987,7 @@ case"mezeluri moscova fierte si afumate":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"mezeluri afumate moscova":{
@@ -1806,7 +2014,7 @@ case"mezeluri afumate moscova":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"afumat de construcții mezeluri":{
@@ -1833,7 +2041,7 @@ case"afumat de construcții mezeluri":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"mezeluri semi-afumate poltava":{
@@ -1860,7 +2068,7 @@ case"mezeluri semi-afumate poltava":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"mezeluri rostov fierte și afumate":{
@@ -1887,7 +2095,7 @@ case"mezeluri rostov fierte și afumate":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"mezeluri fierte rus":{
@@ -1914,7 +2122,7 @@ case"mezeluri fierte rus":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 case"mezeluri fierte și afumate cârnați":{
@@ -1941,7 +2149,7 @@ case"mezeluri fierte și afumate cârnați":{
 			resultall=resultall*-1;
 			}
 							var v=document.getElementById("vv");
-							v.value=resultall;
+							v.value=resultall.toFixed(1);
 };
 	break;
 	

@@ -56,14 +56,25 @@
 										<input onload="OnLoad()" type="number" class="input" id="in2" name="Ot.Vlajnosti" >  <output class="chart_div" id="gran2">  </output> <output id="error2"> </output>
 									<div id="gran22" class="chart_div">Restricție  [-60   100]</div><br>
 							
-						<input type="button" class="out" id="btn" value="Calcalat"><br><br>
+						<input type="button" class="out" id="btn" value="A calcula"><br><br>
+						<hr>
 							<div><output id="out1"></output></div>	
 							<div><output class="textnormal" id="outtemp1"></output></div>	<br>
 								<output type="number" class="input" id="result1" name="result1" readonly> </output><br><br>
 				
 							<div> <output class="textnormal" id="outtemp2"></output></div>		<br>	
 								<output type="number" class="input" id="result2" name="result2" readonly> </output> <br><br>
-								<div id="s"></div>
+								<input type="button" class="out" id="resurs" onclick="go()" value="A alege echipament"><br>
+								<script>
+							function go() {
+							var i2=document.getElementById("outtemp2").value;
+							var i1=document.getElementById("outtemp1").value;
+							if(i1=="Conţinutul de umiditate")
+							{document.location = "ResursMD.html?id=" + document.getElementById("result1").value;}
+							if(i2=="Conţinutul de umiditate")
+							{document.location = "ResursMD.html?id=" + document.getElementById("result2").value;}
+							}
+							</script>
 						</form>  
 						</ul>
 						<script type="text/javascript" src="js/math_2x2RO.js"></script>
