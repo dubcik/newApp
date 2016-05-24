@@ -298,6 +298,16 @@ a:hover{
 
 }
 .textnormal{
+    display: table-cell;
+     text-transform:none;
+     text-align: right;
+    /* border:2px solid red;*/
+}
+.textnormal2{
+    display: table-cell;
+
+    text-align: right;
+   /* border:2px solid blue;*/
      text-transform:none;
 }
 .blink {
@@ -340,19 +350,6 @@ a:hover{
     text-align: center;
     text-transform:none;
 }
-
-.numeration_resurs1{
-    display: table-cell;
-    font-size:18px;
-    padding: 10px; /* Поля вокруг текста */
-    margin: 0 auto;
-
-    width: 25%;/*160px;*/
-     text-align: center;
-    text-transform:none;
-     font-weight:none;
-    /* border:2px solid blue;*/
-}
 .center{
     text-align: center;
    /* margin: 0 auto;
@@ -361,17 +358,50 @@ a:hover{
   vertical-align: middle;
     /*border:2px solid orange;*/
 }
+.numeration_resurs1{
+    display: table-cell;
+    font-size:17px;
+    padding: 5px 0em 5px 0em;/* Поля вокруг текста */
+    
+    width: 25%;/*160px;*/
+    text-align: right;
+    text-transform:none;
+     font-weight:none;
+    /* border:2px solid blue;*/
+}
 .numeration_resurs{
     display: table-cell;
-    font-size:18px;
-    height: 30px;
-    width: 160px;
-    padding: 25px; /* Поля вокруг текста */
+    font-size:17px;
+    width: 25%;
+    padding: 25px 3% 15px 2%; /* Поля вокруг текста */
     /*margin: 0 auto;*/
+     text-align: right;
+    text-transform:none;
+     font-weight:none;
+    /* border:2px solid green;*/
+}
+.numer_table{
+display: table-cell;
+    font-size:17px;
+    height: 20px;
+    width: 5%;
+    padding: 20px 15px; 
+    text-align: center;
+    text-transform:none;
+     font-weight:none;
+    /*  border:2px solid red;*/
+}
+.numer_table2{
+    display: table-cell;
+    font-size:17px;
+    padding: 10px; /* Поля вокруг текста */
+    /*margin: 0 auto;*/
+
+    width: 5%;/*160px;*/
      text-align: center;
     text-transform:none;
      font-weight:none;
-    /* border:2px solid yellow;*/
+     /*border:2px solid orange;*/
 }
 
 .blik3{
@@ -477,7 +507,6 @@ a:hover{
     text-align: center;
     border-radius:5px;
     -webkit-border-radius:5px;
-    color:#FFFFFF;
     margin:0 auto;
     padding:21px 15px 15px 15px;
     background-color:#333333;

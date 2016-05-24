@@ -12,111 +12,259 @@
         <title>Equipment selection</title>
 		<script>
 		function OnLoad() {
-		//температура+отн влажн  =  (94/100)2733    (-50/0)0  0,02
-		//энтальпия+отн влажн  =  (-50/100)0,02			(1918/100)656   (5000/95)1823
-		//температура+энтальпия=  (95/9196)307,95		(0/0,09)0,04
-            var paramValue = window.location.href.split("?")[1].split("=")[1];
+           var paramValue = window.location.href.split(/id=|&/)[1];
+			var paramValue2= window.location.href.split(/m=/)[1];//.split("=")[1].split("&")[1].split("=")[1];
+			
+			
+			
+			
+			
 			var razmer=[];var obiem=[];var gabariti=[];
 			var vlagosoderjanie2;
 			var vlagosoderjanie3;
 			var cena=[];
-			razmer=[2.0,2.4,2.8,3.2,3.6,4.0];//6  0-5
-			obiem=[2.9,3.5,4.0,4.6,5.2,5.8,6.4,7.5,5.4,6.8];//10  0-9
-			gabariti=[1.2,2.0,1.6,2.4,2.6];//5  0-4
-			cena=[810.1,934.3,1059.4,1184.1,1308.7,1433.4,1641.1,1868.8];//8  0-7
+			razmer=[2.0,2.4,2.8,3.2,3.6];//5  0-4
+			obiem=[2.9,3.5,4.0,4.6,5.2,4.8,5.8,6.7,7.7,8.6,
+				5.1,6.1,7.2,8.2,9.2,7.7,9.2,10.8,12.3,13.8];//20 0-19
+			gabariti=[1.2,2.0,1.6,2.4];//4  0-3
+			cena=[1010.1,1134.3,1259.4,1384.1,1508.7,1733.4,1841.1,2068.8,2154.1,2323.3
+			,2443.4,2584.3,2755.7,2826.6,2948.5,3098.5,3156.4,3320.8,3452.4,3576.6];//20  0-19  1059,484848484848
 			
 			
-			vlagosoderjanie2=10;
+			vlagosoderjanie2=5;
 			
-			vlagosoderjanie3=1000;
-			
-			
-			if(paramValue<=vlagosoderjanie2)//1
-			{	//1
-				document.getElementById("tr11").innerHTML=razmer[0]; //2.0
+			vlagosoderjanie3=50;
+						
+			if(paramValue<vlagosoderjanie2&paramValue2=="%3E2000")//1
+			{	
+			document.getElementById("tr1").innerHTML=1;
+				document.getElementById("tr11").innerHTML=razmer[0].toFixed(1); //2.0
 				document.getElementById("tr12").innerHTML=obiem[0];  //2.9
 				document.getElementById("tr13").innerHTML=gabariti[0]+" x "+gabariti[0];  //1.2 х 1.2
-				document.getElementById("tr14").innerHTML=cena[0]; //53473
-				//2
+				document.getElementById("tr14").innerHTML=cena[0]; //
+				
+			document.getElementById("tr2").innerHTML=2;
 				document.getElementById("tr21").innerHTML=razmer[1]; 	//2.4
 				document.getElementById("tr22").innerHTML=obiem[1]; 	//3.5
-				document.getElementById("tr23").innerHTML=gabariti[0]+" x "+gabariti[1]; 	//1.2 х 2.0
+				document.getElementById("tr23").innerHTML=gabariti[0]+" x "+gabariti[0]; 	//1.2 х 1.2
 				document.getElementById("tr24").innerHTML=cena[1]; 	//61669
-				//3
+				
+			document.getElementById("tr3").innerHTML=3;	
 				document.getElementById("tr31").innerHTML=razmer[2]; 	//2.8
-				document.getElementById("tr32").innerHTML=obiem[2]; 	//4.0
-				document.getElementById("tr33").innerHTML=gabariti[1]+" x "+gabariti[1]; 	//2.0 х 2.0
+				document.getElementById("tr32").innerHTML=obiem[2].toFixed(1); 	//4.0
+				document.getElementById("tr33").innerHTML=gabariti[0].toFixed(1)+" x "+gabariti[0].toFixed(1); 	//2.0 х 2.0
 				document.getElementById("tr34").innerHTML=cena[2]; 	//69926
-				//4
-				document.getElementById("tr41").innerHTML=razmer[1]; 	//2.4
-				document.getElementById("tr42").innerHTML=obiem[3]; 	//4.6
-				document.getElementById("tr43").innerHTML=gabariti[1]+" x "+gabariti[2]; 	//2.0 х 1.6
-				document.getElementById("tr44").innerHTML=cena[3]; 	//78151
-				//5
-				document.getElementById("tr51").innerHTML=razmer[2]; 	//2.8
-				document.getElementById("tr52").innerHTML=obiem[3]; 	//4.6
-				document.getElementById("tr53").innerHTML=gabariti[0]+" x "+gabariti[1]; 	//1.2 х 2.0
-				document.getElementById("tr54").innerHTML=(cena[2]+cena[3])/2; 	// (69926+78151)/2 = 74038,5
-				//6
-				document.getElementById("tr61").innerHTML=razmer[2]; 	//2.8
-				document.getElementById("tr62").innerHTML=obiem[4]; 	//5.2
-				document.getElementById("tr63").innerHTML=gabariti[2]+" x "+gabariti[2]; 	//1.6 х 1.6
-				document.getElementById("tr64").innerHTML=cena[4]; 	//86378
-			}
-			 if(paramValue>vlagosoderjanie2&&paramValue<vlagosoderjanie3)//2
-			{
-				//7
-				document.getElementById("tr11").innerHTML=razmer[2]; 	//2.8
-				document.getElementById("tr12").innerHTML=obiem[4]; 	//5.2
-				document.getElementById("tr13").innerHTML=gabariti[2]+" x "+gabariti[2]; 	// 1.6 х 1.6
-				document.getElementById("tr14").innerHTML=cena[3]; 	//78151
-				//8
-				document.getElementById("tr21").innerHTML=razmer[3]; 	//3.2
-				document.getElementById("tr22").innerHTML=obiem[8]; 	//5.4
-				document.getElementById("tr23").innerHTML=gabariti[2]+" x "+gabariti[1]; 	// 1.6 х 2.0
-				document.getElementById("tr24").innerHTML=(cena[3]+cena[4])/2; 	//(78151+86378)/2=  <86378
-				//9
-				document.getElementById("tr31").innerHTML=razmer[3]; 	//3.2
-				document.getElementById("tr32").innerHTML=obiem[5]; 	//5.8
-				document.getElementById("tr33").innerHTML=gabariti[2]+" x "+gabariti[3]; 	//1.6 х 2.4
-				document.getElementById("tr34").innerHTML=cena[4]; 	//86378
-				//10
-				document.getElementById("tr41").innerHTML=razmer[4]; 	//3,6
-				document.getElementById("tr42").innerHTML=obiem[6]; 	//6.4
-				document.getElementById("tr43").innerHTML=gabariti[3]+" x "+gabariti[3]; 	//2.4 х 2.4
-				document.getElementById("tr44").innerHTML=cena[5]+1000; 	//94605
-				//11
-				document.getElementById("tr51").innerHTML=razmer[3]; 	//3,2
-				document.getElementById("tr52").innerHTML=(obiem[5]+obiem[6])/2; 	//(5.8+6.4)/2= 6,1
-				document.getElementById("tr53").innerHTML=gabariti[3]+" x "+gabariti[1]; 	//2.4 х 2.0
-				document.getElementById("tr54").innerHTML=(cena[4]+cena[5])/2; 	//(86378+94605)/2
-				//12
-			}
-			 if(paramValue>=vlagosoderjanie3)//3
-			{
-				//13
-				document.getElementById("tr11").innerHTML=razmer[4]; 	//
-				document.getElementById("tr12").innerHTML=obiem[5]; 	//
-				document.getElementById("tr13").innerHTML=gabariti[1]+" x "+gabariti[3]; 	//
-				document.getElementById("tr14").innerHTML=cena[4]; 	//
-				//14
-				document.getElementById("tr21").innerHTML=razmer[4]; 	//
-				document.getElementById("tr22").innerHTML=obiem[6]; 	//
-				document.getElementById("tr23").innerHTML=gabariti[3]+" x "+gabariti[3]; 	//
-				document.getElementById("tr24").innerHTML=cena[5]; 	//
-				//15
-				document.getElementById("tr31").innerHTML=razmer[5]; 	//
-				document.getElementById("tr32").innerHTML=obiem[9]; 	//
-				document.getElementById("tr33").innerHTML=gabariti[3]+" x "+gabariti[4]; 	//
-				document.getElementById("tr34").innerHTML=cena[6]; 	//
-				//16
-				document.getElementById("tr41").innerHTML=razmer[5]; 	//
-				document.getElementById("tr42").innerHTML=obiem[7]; 	//
-				document.getElementById("tr43").innerHTML=gabariti[4]+" x "+gabariti[4]; 	//
-				document.getElementById("tr44").innerHTML=cena[7]; 	//
 				
 			}
+			if(paramValue<vlagosoderjanie2&paramValue2=="2000%3C=X%3C=5000")//2
+			{
+			document.getElementById("tr1").innerHTML=1;
+				document.getElementById("tr11").innerHTML=razmer[2]; 	//2.8
+				document.getElementById("tr12").innerHTML=obiem[2].toFixed(1); 	//4.0
+				document.getElementById("tr13").innerHTML=gabariti[0].toFixed(1)+" x "+gabariti[0].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr14").innerHTML=cena[2]; 	//69926
+				
+			document.getElementById("tr2").innerHTML=2;
+				document.getElementById("tr21").innerHTML=razmer[2].toFixed(1); //2.0
+				document.getElementById("tr22").innerHTML=obiem[3];  //2.9
+				document.getElementById("tr23").innerHTML=gabariti[0]+" x "+gabariti[0];  //1.2 х 1.2
+				document.getElementById("tr24").innerHTML=cena[3]; //
+				
+			document.getElementById("tr3").innerHTML=3;
+				document.getElementById("tr31").innerHTML=razmer[3]; 	//2.4
+				document.getElementById("tr32").innerHTML=obiem[4]; 	//3.5
+				document.getElementById("tr33").innerHTML=gabariti[0]+" x "+gabariti[0]; 	//1.2 х 1.2
+				document.getElementById("tr34").innerHTML=cena[4]; 	//
+				
+			document.getElementById("tr4").innerHTML=4;	
+				document.getElementById("tr41").innerHTML=razmer[0]; 	//2.8
+				document.getElementById("tr42").innerHTML=obiem[5].toFixed(1); 	//4.0
+				document.getElementById("tr43").innerHTML=gabariti[0].toFixed(1)+" x "+gabariti[1].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr44").innerHTML=cena[5]; 	//
+				
+				
+			}
+			if(paramValue<vlagosoderjanie2&paramValue2=="%3E5000")//3
+			{
+			document.getElementById("tr1").innerHTML=1;
+				document.getElementById("tr11").innerHTML=razmer[4]; 	//2.8
+				document.getElementById("tr12").innerHTML=obiem[6].toFixed(1); 	//4.0
+				document.getElementById("tr13").innerHTML=gabariti[0].toFixed(1)+" x "+gabariti[0].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr14").innerHTML=cena[6]; 	//
+				
+			document.getElementById("tr2").innerHTML=2;
+				document.getElementById("tr21").innerHTML=razmer[1].toFixed(1); //2.0
+				document.getElementById("tr22").innerHTML=obiem[7];  //2.9
+				document.getElementById("tr23").innerHTML=gabariti[0]+" x "+gabariti[1].toFixed(1);  //1.2 х 2.0
+				document.getElementById("tr24").innerHTML=cena[7]; //
+				
+			document.getElementById("tr3").innerHTML=3;	
+				document.getElementById("tr31").innerHTML=razmer[0]; 	//2.4
+				document.getElementById("tr32").innerHTML=obiem[8]; 	//3.5
+				document.getElementById("tr33").innerHTML=gabariti[2]+" x "+gabariti[2].toFixed(1); 	//1.2 х 1.2
+				document.getElementById("tr34").innerHTML=cena[8]; 	//
+				
+			document.getElementById("tr4").innerHTML=4;	
+				document.getElementById("tr41").innerHTML=razmer[1]; 	//2.8
+				document.getElementById("tr42").innerHTML=obiem[9].toFixed(1); 	//4.0
+				document.getElementById("tr43").innerHTML=gabariti[2].toFixed(1)+" x "+gabariti[2].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr44").innerHTML=cena[9]; 	//
+			}
 			
+			
+			 if(paramValue>=vlagosoderjanie2&&paramValue<=vlagosoderjanie3&paramValue2=="%3E2000")//4
+			{
+				//3
+			document.getElementById("tr1").innerHTML=1;
+				document.getElementById("tr11").innerHTML=razmer[2].toFixed(1); //2.0
+				document.getElementById("tr12").innerHTML=obiem[3];  //2.9
+				document.getElementById("tr13").innerHTML=gabariti[0]+" x "+gabariti[0];  //1.2 х 1.2
+				document.getElementById("tr14").innerHTML=cena[3]; //
+				//4
+			document.getElementById("tr2").innerHTML=2;
+				document.getElementById("tr21").innerHTML=razmer[3]; 	//2.4
+				document.getElementById("tr22").innerHTML=obiem[4]; 	//3.5
+				document.getElementById("tr23").innerHTML=gabariti[0]+" x "+gabariti[0]; 	//1.2 х 1.2
+				document.getElementById("tr24").innerHTML=cena[4]; 	//
+				//5
+			document.getElementById("tr3").innerHTML=3;	
+				document.getElementById("tr31").innerHTML=razmer[0]; 	//2.8
+				document.getElementById("tr32").innerHTML=obiem[5].toFixed(1); 	//4.0
+				document.getElementById("tr33").innerHTML=gabariti[0].toFixed(1)+" x "+gabariti[1].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr34").innerHTML=cena[5]; 	//
+				//6
+			document.getElementById("tr4").innerHTML=4;
+				document.getElementById("tr41").innerHTML=razmer[4]; 	//2.8
+				document.getElementById("tr42").innerHTML=obiem[6].toFixed(1); 	//4.0
+				document.getElementById("tr43").innerHTML=gabariti[0].toFixed(1)+" x "+gabariti[0].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr44").innerHTML=cena[6]; 	//
+				
+			}
+			if(paramValue>=vlagosoderjanie2&&paramValue<=vlagosoderjanie3&paramValue2=="2000%3C=X%3C=5000")//5
+			{
+			//10
+			document.getElementById("tr1").innerHTML=1;
+				document.getElementById("tr11").innerHTML=razmer[2]; 	//2.4
+				document.getElementById("tr12").innerHTML=obiem[10]; 	//3.5
+				document.getElementById("tr13").innerHTML=gabariti[0]+" x "+gabariti[1].toFixed(1); 	//1.2 х 1.2
+				document.getElementById("tr14").innerHTML=cena[10]; 	//
+				//11
+			document.getElementById("tr2").innerHTML=2;
+				document.getElementById("tr21").innerHTML=razmer[3]; 	//2.8
+				document.getElementById("tr22").innerHTML=obiem[11].toFixed(1); 	//4.0
+				document.getElementById("tr23").innerHTML=gabariti[0].toFixed(1)+" x "+gabariti[1].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr24").innerHTML=cena[11]; 	//
+				//12
+			document.getElementById("tr3").innerHTML=3;	
+				document.getElementById("tr31").innerHTML=razmer[2]; 	//2.8
+				document.getElementById("tr32").innerHTML=obiem[12].toFixed(1); 	//4.0
+				document.getElementById("tr33").innerHTML=gabariti[2].toFixed(1)+" x "+gabariti[2].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr34").innerHTML=cena[12]; 	//
+				//13
+			document.getElementById("tr4").innerHTML=4;
+				document.getElementById("tr41").innerHTML=razmer[0].toFixed(1); //2.0
+				document.getElementById("tr42").innerHTML=obiem[13];  //2.9
+				document.getElementById("tr43").innerHTML=gabariti[2]+" x "+gabariti[3];  //1.2 х 1.2
+				document.getElementById("tr44").innerHTML=cena[13]; //
+			}
+			if(paramValue>=vlagosoderjanie2&&paramValue<=vlagosoderjanie3&paramValue2=="%3E5000")//6
+			{
+				//14
+			document.getElementById("tr1").innerHTML=1;
+				document.getElementById("tr11").innerHTML=razmer[4]; 	//2.4
+				document.getElementById("tr12").innerHTML=obiem[14]; 	//3.5
+				document.getElementById("tr13").innerHTML=gabariti[0]+" x "+gabariti[1].toFixed(1); 	//1.2 х 1.2
+				document.getElementById("tr14").innerHTML=cena[14]; 	//
+				//15
+			document.getElementById("tr2").innerHTML=2;
+				document.getElementById("tr21").innerHTML=razmer[3]; 	//2.8
+				document.getElementById("tr22").innerHTML=obiem[15].toFixed(1); 	//4.0
+				document.getElementById("tr23").innerHTML=gabariti[2].toFixed(1)+" x "+gabariti[2].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr24").innerHTML=cena[15]; 	//
+				//16
+			document.getElementById("tr3").innerHTML=3;	
+				document.getElementById("tr31").innerHTML=razmer[4]; 	//2.8
+				document.getElementById("tr32").innerHTML=obiem[16].toFixed(1); 	//4.0
+				document.getElementById("tr33").innerHTML=gabariti[2].toFixed(1)+" x "+gabariti[2].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr34").innerHTML=cena[16]; 	//
+				//17
+			document.getElementById("tr4").innerHTML=4;
+				document.getElementById("tr41").innerHTML=razmer[1].toFixed(1); //2.0
+				document.getElementById("tr42").innerHTML=obiem[17];  //2.9
+				document.getElementById("tr43").innerHTML=gabariti[2]+" x "+gabariti[3];  //1.2 х 1.2
+				document.getElementById("tr44").innerHTML=cena[17]; //
+			}
+			if(paramValue>vlagosoderjanie3&paramValue2=="%3E2000")//7
+			{
+				//11
+			document.getElementById("tr1").innerHTML=1;
+				document.getElementById("tr11").innerHTML=razmer[3]; 	//2.8
+				document.getElementById("tr12").innerHTML=obiem[11].toFixed(1); 	//4.0
+				document.getElementById("tr13").innerHTML=gabariti[0].toFixed(1)+" x "+gabariti[1].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr14").innerHTML=cena[11]; 	//
+				//13
+			document.getElementById("tr2").innerHTML=2;
+				document.getElementById("tr21").innerHTML=razmer[0].toFixed(1); //2.0
+				document.getElementById("tr22").innerHTML=obiem[13];  //2.9
+				document.getElementById("tr23").innerHTML=gabariti[2]+" x "+gabariti[3];  //1.2 х 1.2
+				document.getElementById("tr24").innerHTML=cena[13]; //
+				//14
+			document.getElementById("tr3").innerHTML=3;	
+				document.getElementById("tr31").innerHTML=razmer[4]; 	//2.4
+				document.getElementById("tr32").innerHTML=obiem[14]; 	//3.5
+				document.getElementById("tr33").innerHTML=gabariti[0]+" x "+gabariti[1].toFixed(1); 	//1.2 х 1.2
+				document.getElementById("tr34").innerHTML=cena[14]; 	//
+				//15
+			document.getElementById("tr4").innerHTML=4;
+				document.getElementById("tr41").innerHTML=razmer[3]; 	//2.8
+				document.getElementById("tr42").innerHTML=obiem[15].toFixed(1); 	//4.0
+				document.getElementById("tr43").innerHTML=gabariti[2].toFixed(1)+" x "+gabariti[2].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr44").innerHTML=cena[15]; 	//
+			}
+			 if(paramValue>vlagosoderjanie3&paramValue2=="2000%3C=X%3C=5000")//8
+			{
+				//16
+			document.getElementById("tr1").innerHTML=1;
+				document.getElementById("tr11").innerHTML=razmer[4]; 	//2.8
+				document.getElementById("tr12").innerHTML=obiem[16].toFixed(1); 	//4.0
+				document.getElementById("tr13").innerHTML=gabariti[2].toFixed(1)+" x "+gabariti[2].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr14").innerHTML=cena[16]; 	//
+				//17
+			document.getElementById("tr2").innerHTML=2;
+				document.getElementById("tr21").innerHTML=razmer[1].toFixed(1); //2.0
+				document.getElementById("tr22").innerHTML=obiem[17];  //2.9
+				document.getElementById("tr23").innerHTML=gabariti[2]+" x "+gabariti[3];  //1.2 х 1.2
+				document.getElementById("tr24").innerHTML=cena[17]; //
+				//18
+			document.getElementById("tr3").innerHTML=3;	
+				document.getElementById("tr31").innerHTML=razmer[2]; 	//2.8
+				document.getElementById("tr32").innerHTML=obiem[18].toFixed(1); 	//4.0
+				document.getElementById("tr33").innerHTML=gabariti[2].toFixed(1)+" x "+gabariti[3].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr34").innerHTML=cena[18]; 	//
+				
+			}
+			if(paramValue>vlagosoderjanie3&paramValue2=="%3E5000")//6
+			{
+			//18
+			document.getElementById("tr1").innerHTML=1;
+				document.getElementById("tr11").innerHTML=razmer[2]; 	//2.8
+				document.getElementById("tr12").innerHTML=obiem[18].toFixed(1); 	//4.0
+				document.getElementById("tr13").innerHTML=gabariti[2].toFixed(1)+" x "+gabariti[3].toFixed(1); 	//2.0 х 2.0
+				document.getElementById("tr14").innerHTML=cena[18]; 	//
+				//19
+			document.getElementById("tr2").innerHTML=2;
+				document.getElementById("tr21").innerHTML=razmer[3].toFixed(1); //2.0
+				document.getElementById("tr22").innerHTML=obiem[19];  //2.9
+				document.getElementById("tr23").innerHTML=gabariti[2]+" x "+gabariti[3];  //1.2 х 1.2
+				document.getElementById("tr24").innerHTML=cena[19]; //
+				//20
+			document.getElementById("tr3").innerHTML=3;	
+				document.getElementById("tr31").innerHTML=razmer[4]; 	//2.4
+				document.getElementById("tr32").innerHTML=obiem[15]; 	//3.5
+				document.getElementById("tr33").innerHTML=gabariti[2]+" x "+gabariti[3].toFixed(1); 	//1.2 х 1.2
+				document.getElementById("tr34").innerHTML=cena[15]; 	//
+			}
+			document.getElementById("resurs1").value=paramValue;
         }
 		</script>
     </head>
@@ -133,50 +281,42 @@
 		<div class="home"><a class="subbHome2" href="indexEN.html" ><img class="homeimage2" src="img/house.png"  /></a ></div>
 	</div>
 	        <div class="app" >
-                
-					<div class="resurs" id="resurs">List of hardware options:</div>
+                 <br>
+					<output class="resurs" id="resurs">List of hardware options for moisture content =</output><output class="resurs" id="resurs1"></output><output>:</output><br><br>
+					
 					<div  class="center">
 					<form>
 					<tr  ><!--razmer,obiem,gabariti,vlagosoderjanie,cena;-->
+					<div class="numer_table2" >№</div>
 					<div class="numeration_resurs1">Height, м &nbsp&nbsp&nbsp&nbsp  </div>
 					<div class="numeration_resurs1">Int. volume, м<sup><small>3</sup></small> &nbsp&nbsp&nbsp&nbsp </div>
 					<div class="numeration_resurs1">Int. dimensions, м. &nbsp&nbsp&nbsp&nbsp </div>
-					<div class="numeration_resurs1" >Price, € &nbsp&nbsp&nbsp&nbsp  </div><hr><br>
+					<div class="numeration_resurs1">Price, € &nbsp&nbsp&nbsp&nbsp  </div><hr><br>
 					
+					<div class="numer_table" id="tr1" ></div>
 					<div class="numeration_resurs" id="tr11" ></div>
 					<div class="numeration_resurs" id="tr12" ></div>
 					<div class="numeration_resurs" id="tr13" ></div>
 					<div class="numeration_resurs" id="tr14" ></div><hr><br>
 					
+					<div class="numer_table" id="tr2" ></div>
 					<div class="numeration_resurs" id="tr21" ></div>
 					<div class="numeration_resurs" id="tr22" ></div>
 					<div class="numeration_resurs" id="tr23" ></div>
 					<div class="numeration_resurs" id="tr24" ></div><hr><br>
 					
+					<div class="numer_table" id="tr3" ></div>
 					<div class="numeration_resurs" id="tr31" ></div>
 					<div class="numeration_resurs" id="tr32" ></div>
 					<div class="numeration_resurs" id="tr33" ></div>
 					<div class="numeration_resurs" id="tr34" ></div><hr><br>
 					
+					<div class="numer_table" id="tr4" ></div>
 					<div class="numeration_resurs" id="tr41" ></div>
 					<div class="numeration_resurs" id="tr42" ></div>
 					<div class="numeration_resurs" id="tr43" ></div>
 					<div class="numeration_resurs" id="tr44" ></div><hr><br>
 					
-					<div class="numeration_resurs" id="tr51" ></div>
-					<div class="numeration_resurs" id="tr52" ></div>
-					<div class="numeration_resurs" id="tr53" ></div>
-					<div class="numeration_resurs" id="tr54" ></div><hr><br>
-					
-					<div class="numeration_resurs" id="tr61" ></div>
-					<div class="numeration_resurs" id="tr62" ></div>
-					<div class="numeration_resurs" id="tr63" ></div>
-					<div class="numeration_resurs" id="tr64" ></div><hr><br>
-					
-				<!--<div class="numeration_resurs" id="tr71" ></div>
-					<div class="numeration_resurs" id="tr72" ></div>
-					<div class="numeration_resurs" id="tr73" ></div>
-					<div class="numeration_resurs" id="tr74" ></div><br>-->
 					
   
 					</tr>

@@ -65,31 +65,58 @@
 										<input onload="OnLoad()" type="number" class="input" id="in2" name="Ot.Vlajnosti" >  <output class="chart_div" id="gran2">  </output> <output id="error2"> </output>
 									<div id="gran22" class="chart_div">Limitation  [-60   100]</div><br>
 							
-						<input type="button" class="out" id="btn" value="Calcalate"><br><br>
+						<input type="button" onclick="repeat()" value="New calcalate"></input><input type="button"  id="btn" value="Calcalate"><br><br>
 						<hr>
-							<div><output id="out1"></output></div>	
-							<div><output class="textnormal" id="outtemp1"></output></div>	<br>
-								<output type="number" class="input" id="result1" name="result1" readonly> </output><br><br>
-				
-							<div> <output class="textnormal" id="outtemp2"></output></div>		<br>	
-								<output type="number" class="input" id="result2" name="result2" readonly> </output> <br><br>
+							<div><output id="out1"></output></div>
+<script>
+							function repeat() {
+							document.location = "index5.html";
+							}
+							</script>
+		<table width=100%> 
+								<tr> 
+								<td  ><output class="textnormal2" id="outtemp1"></output>	</td> 
+								<td  ><output  class="textnormal2" style="float:right;" id="result1" > </output></td> 
+								</tr> 
+								<tr> 
+								<td  ><output class="textnormal2" id="outtemp2"></output>	</td> 
+								<td  ><output  class="textnormal2"  style="float:right;"  id="result2"> </output></td> 
+								</tr> 
+								<tr> 
+								<td  ><output id="newopen"></output>	</td> 
+								<td  ><output id="newopen2"></output>	</td> 
+								</tr>
+								</table>		
+							
+								
+								
 								<input type="button" class="out" id="resurs" onclick="go()" value="Choose equipment"><br>
 								<script>
 							function go() {
 							var i2=document.getElementById("outtemp2").value;
 							var i1=document.getElementById("outtemp1").value;
 							if(i1=="Moisture content")
-							{document.location = "ResursEN.html?id=" + document.getElementById("result1").value;}
+							{document.location = "ResursEN.html?id=" + document.getElementById("result1").value+"&m="+document.getElementById("massa").value;}
 							if(i2=="Moisture content")
-							{document.location = "ResursEN.html?id=" + document.getElementById("result2").value;}
+							{document.location = "ResursEN.html?id=" + document.getElementById("result2").value+"&m="+document.getElementById("massa").value;}//massa
 							}
 							</script>
 						</form>  
 						</ul>
 						<script type="text/javascript" src="js/math_2x2EN.js"></script>
+						<script>
+							function open(){
+							if(document.getElementById('in1').value!=""&document.getElementById('in2').value!="")
+								{
+								if(document.getElementById('notselect1').value==""&document.getElementById('notselect2').value==""){
+								document.getElementById('newopen').innerHTML='<output> Weight  </output> ';//Холодопроизводительность
+								document.getElementById('newopen2').innerHTML='<select id="massa"><option >>2000</option> <option >2000<=X<=5000</option> <option >>5000</option></select> <output> kg  </output>'
+									}}  
+							}
+							</script>
 						<script type="text/javascript">
 						
-document.getElementById("btn").onclick=function(){finish();};
+document.getElementById("btn").onclick=function(){finish();open();};
 ///h = f(t), t = f(d), d = f(h), h = f(d), d = f(t), t = f(d)
 									</script>
 				</p>

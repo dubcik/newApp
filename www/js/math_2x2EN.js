@@ -330,8 +330,8 @@ dd_spl=[1.467856374,  2.5834567835,  -3.0498823687,  0.77697048807, 0.6932543087
  hout=m[0];
  dout=m[1];
  dout=(dout*100000).toFixed(0);
-   result1.value=(hout/1000);
-	result2.value=dout/100;
+   result1.value=(hout/1000).toFixed(1);;
+	result2.value=(dout/100).toFixed(1);;
 	inputType1.value="Entalphy";
 	inputType2.value="Moisture content";
 	}
@@ -385,9 +385,10 @@ dd_spl=[1.467856374,  2.5834567835,  -3.0498823687,  0.77697048807, 0.6932543087
 				fiin=fiin-0.01;
 			}
 			limitchange(limitEntalpy1,limitEntalpy2);
-			
-			result1.value=doutfinal/100;//doutfinal;
-	result2.value=fiinfinal;//fiinfinal;
+			var proverka=doutfinal/100;
+			while(proverka>100){proverka=(proverka/10).toFixed(1);}
+			result1.value=proverka.toFixed(1);//doutfinal;
+	result2.value=fiinfinal.toFixed(1);;//fiinfinal;
 	inputType1.value="Moisture content";
 	inputType2.value="Relative humidity";
 			
@@ -436,9 +437,10 @@ dd_spl=[1.467856374,  2.5834567835,  -3.0498823687,  0.77697048807, 0.6932543087
 				tvin=tvin-1;
 			}
 			limitchange(limitEntalpy1,limitEntalpy2);
-			
-result1.value=doutfinal/100;
-result2.value=tfinal;
+			var proverka=doutfinal/100;
+			while(proverka>100){proverka=(proverka/10).toFixed(1);}
+result1.value=proverka.toFixed(1);//doutfinal;
+result2.value=tfinal.toFixed(1);;
 	inputType1.value="Moisture content";
 	inputType2.value="Temperature";
 		}
